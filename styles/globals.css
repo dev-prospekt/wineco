@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "butler-regular";
+  src: url("../public/fonts/butler/Butler_Regular_Stencil.otf");
+}
+
+@font-face {
+  font-family: "avenir-medium";
+  src: url("../public/fonts/avenir/Metropolis-Medium.otf");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: url('/images/bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.fullscreenmenu {
+  background-image: url('/images/menu_bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 10;
+}
+
+.swiper {
+  overflow: unset !important;
+}
+.swiper-slide {
+  height: 100vh !important;
+  opacity: 0 !important;
+}
+.swiper-slide-active {
+  opacity: 1 !important;
+}
+.swiper-pagination {
+  top: 500px !important;
+  right: 0 !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.swiper-pagination span {
+  border:  1px solid #AB8844;
+  background-color: transparent !important;
+  opacity: 1;
+  margin: 10px 0px !important;
+}
+.swiper-pagination span.swiper-pagination-bullet-active {
+  background-color: #AB8844 !important;
+}
+
+
+.bomb {
+  animation-name: anim;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes anim {
+  0% {
+    top: 6rem;
+  }
+  50% {
+    top: 7.5rem;
+  }
+  100% {
+    top: 6rem;
+  }
+}
