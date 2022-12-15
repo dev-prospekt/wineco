@@ -12,7 +12,11 @@ module.exports = {
     extend: {
       colors: {
         'original': '#ab8844',
+        'textcolor': 'rgba(67, 54, 51, 1)'
       },
+      boxShadow: {
+        'original-shadow': '0px 10px 40px rgba(171, 136, 68, 0.1)',
+      }
     },
   },
   plugins: [],

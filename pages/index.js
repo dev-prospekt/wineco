@@ -2,6 +2,9 @@ import HomePage from "../components/homePage";
 import AboutUs from "../components/aboutUs";
 import WineList from "../components/wineList";
 import WineShop from "../components/wineShop";
+import OurBrands from "../components/ourBrands";
+import Blog from "../components/blog";
+import ContactUs from "../components/contactUs";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, EffectFade, Pagination, Navigation } from 'swiper';
@@ -34,6 +37,15 @@ export default function Home() {
       </SwiperSlide>
       <SwiperSlide>
         <WineShop />
+      </SwiperSlide>
+      <SwiperSlide>
+        <OurBrands />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Blog />
+      </SwiperSlide>
+      <SwiperSlide>
+        <ContactUs />
       </SwiperSlide>
     </Swiper>
   )
