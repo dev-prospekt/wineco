@@ -5,23 +5,23 @@ export default function ContactUs() {
     <div className="homepage grid grid-cols-2 h-full">
 
         <div className="flex flex-col justify-center items-start relative mr-36 mt-40">
-            <h1 className='font-butlerregular text-5xl text-original'>CONTACT US</h1>
+            <h1 className='font-butlerregular text-5xl text-original mb-10'>CONTACT US</h1>
 
             <div className='text-lg font-avenirmedium'>
-                <div className='mb-3'>
-                    <p>Wine&Co d.o.o.</p>
+                <div className='mb-10'>
+                    <p className='text-original font-butlerregular text-3xl font-extrabold'>Wine&Co d.o.o.</p>
                     <p>Milutina Barača 5,</p>
                     <p>51000 Rijeka, Croatia</p>
                 </div>
 
-                <div className='mb-3'>
-                    <p>Contact</p>
-                    <p>Phone: +385 (0) 99 311 9497</p>
-                    <p>Email: info@wine-co.hr</p>
+                <div className='mb-10'>
+                    <p className='text-original font-butlerregular text-3xl font-extrabold'>Contact</p>
+                    <p>Phone: <span className='text-original'>+385 (0) 99 311 9497</span></p>
+                    <p>Email: <span className='text-original'>info@wine-co.hr</span></p>
                 </div>
 
-                <div className='mb-3'>
-                    <p>Follow Us</p>
+                <div className=''>
+                    <p className='text-original font-butlerregular text-3xl font-extrabold'>Follow Us</p>
 
                     <div className='flex gap-4'>
                         <Image src="/images/face-icon.svg" width={50} height={50} alt='facebook' />
