@@ -1,26 +1,11 @@
 import Image from 'next/image'
 
-export default function AboutUs() {
+export default function WineShop() {
   return (
     <div className="homepage grid grid-cols-2 h-full">
 
         <div className="flex flex-col justify-center items-start relative mr-36 mt-40">
-            <h1 className='font-butlerregular text-5xl text-original'>ABOUT US</h1>
-
-            <div className='my-10'>
-                <div className='relative mb-7'>
-                    <hr className='bg-original h-0.5' />
-                    <Image src={'/images/zup.svg'} alt="wine" width={50} height={50} className='absolute left-0 -top-5 bg-white' />
-                </div>
-
-                <p className='text-original text-base italic mx-12 font-avenirmedium'>Vino je među pićima najkorisnije, među lijekovima najukusnije, a od hrane najugodnije.</p>
-                <p className='text-original text-base italic mx-12 mt-5 font-avenirmedium'>Plutarch von Charona</p>
-                
-                <div className='relative mt-7'>
-                    <hr className='bg-original h-0.5' />
-                    <Image src={'/images/zdown.svg'} alt="wine" width={50} height={50} className='absolute right-0 -top-2.5 bg-white' />
-                </div>
-            </div>
+            <h1 className='font-butlerregular text-5xl text-original mb-7'>WINE SHOP</h1>
 
             <div className='text-lg font-avenirmedium'>
                 <p className='mb-3'>
@@ -42,7 +27,7 @@ export default function AboutUs() {
         </div>
 
         <div className="relative">
-            <img src='/images/aboutus-bg.svg' alt="aboutus-bg" className='w-full h-screen' />
+            <img src='/images/wineshopbg.svg' alt="wineshopbg" className='w-full h-screen' />
 
             <div className="absolute bottom-28 -right-28">
                 <Image src="/images/bomb2.svg" alt="image" width={450} height={450} />

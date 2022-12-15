@@ -1,5 +1,7 @@
 import HomePage from "../components/homePage";
 import AboutUs from "../components/aboutUs";
+import WineList from "../components/wineList";
+import WineShop from "../components/wineShop";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, EffectFade, Pagination, Navigation } from 'swiper';
@@ -27,8 +29,12 @@ export default function Home() {
       <SwiperSlide>
         <AboutUs />
       </SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
+      <SwiperSlide>
+        <WineList />
+      </SwiperSlide>
+      <SwiperSlide>
+        <WineShop />
+      </SwiperSlide>
     </Swiper>
   )
 }
