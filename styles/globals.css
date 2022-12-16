@@ -26,6 +26,16 @@ body {
   height: 100vh;
 }
 
+body.aboutus-page {
+  background-image: url('/images/bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: auto;
+  height: inherit;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -45,6 +55,7 @@ a {
 
 .swiper {
   overflow: unset !important;
+  padding: initial;
 }
 .swiper-slide {
   height: 100vh !important;

@@ -1,8 +1,9 @@
 import Image from 'next/image'
+import CustomButton from './customButton'
 
 export default function Blog() {
     return (
-        <div className="homepage grid h-full">
+        <div className="blog grid h-full">
 
             <div className="flex flex-col justify-center items-center relative mt-40">
                 <div className="absolute bottom-4 -left-48">
@@ -11,7 +12,7 @@ export default function Blog() {
 
                 <h1 className='font-butlerregular text-5xl text-original mb-7'>BLOG</h1>
 
-                <div className='flex gap-6'>
+                <div className='flex gap-6 mb-10'>
                     
                     <div className='bg-white overflow-hidden rounded-lg max-w-xs shadow-original-shadow'>
                         <Image src='/images/blog1.png' width={360} height={270} alt='blog' />
@@ -69,11 +70,8 @@ export default function Blog() {
                     </div>
 
                 </div>
-
-                <button className='border-original border bg-transparent py-2 px-8 mt-10 text-original rounded-sm
-                hover:bg-original hover:text-white transition-all duration-700'>
-                VIEW ALL
-                </button>
+                
+                <CustomButton title='VIEW ALL' />
 
             </div>
         </div>

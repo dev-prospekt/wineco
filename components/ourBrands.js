@@ -6,7 +6,7 @@ export default function OurBrands() {
     <>
     <Script src='/js/script.js'></Script>
 
-    <div className="homepage grid h-full">
+    <div className="ourbrands grid h-full">
 
         <div className="flex flex-col justify-center items-center relative mt-40">
             <div className="absolute bottom-4 -left-48">

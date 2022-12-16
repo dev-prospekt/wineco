@@ -1,9 +1,15 @@
 import Image from 'next/image'
-import CustomButton from './customButton'
+import Head from 'next/head'
 
-export default function AboutUs() {
+function About() {
   return (
-    <div className="aboutus grid grid-cols-2 h-full">
+    <>
+    <Head>
+        <title>Wineco - About Us</title>
+        <body className='aboutus-page' />
+    </Head>
+
+    <div className="about-page grid grid-cols-2 max-w-7xl m-auto mb-10">
 
         <div className="flex flex-col justify-center items-start relative mr-36 mt-40">
             <h1 className='font-butlerregular text-5xl text-original'>ABOUT US</h1>
@@ -23,7 +29,29 @@ export default function AboutUs() {
                 </div>
             </div>
 
-            <div className='text-lg font-avenirmedium mb-10'>
+            <div className='text-lg font-avenirmedium'>
+                <p className='mb-3'>
+                    <strong>Wine&Co</strong> specijalizirana je veleprodaja vina, žestokih pića i popratnog asortimana.
+                    Naši kupci su ponajbolji restorani, hoteli ali i sve više privatni kupci.
+                </p>
+
+                <p className='mb-3'>
+                    S obzirom na naše dugogodišnje iskustvo, direktno surađujemo s većinom vinara što olakšava i ubrzava put od proizvođača do Vas.
+                </p>
+
+                <p className='mb-3'>Hvala na povjerenju i živjeli!</p>
+
+                <p className='mb-3'>
+                    <strong>Wine&Co</strong> specijalizirana je veleprodaja vina, žestokih pića i popratnog asortimana.
+                    Naši kupci su ponajbolji restorani, hoteli ali i sve više privatni kupci.
+                </p>
+
+                <p className='mb-3'>
+                    S obzirom na naše dugogodišnje iskustvo, direktno surađujemo s većinom vinara što olakšava i ubrzava put od proizvođača do Vas.
+                </p>
+
+                <p className='mb-3'>Hvala na povjerenju i živjeli!</p>
+
                 <p className='mb-3'>
                     <strong>Wine&Co</strong> specijalizirana je veleprodaja vina, žestokih pića i popratnog asortimana.
                     Naši kupci su ponajbolji restorani, hoteli ali i sve više privatni kupci.
@@ -36,16 +64,22 @@ export default function AboutUs() {
                 <p className='mb-3'>Hvala na povjerenju i živjeli!</p>
             </div>
 
-            <CustomButton title='READ MORE' link='/about' />
+            <button className='border-original border bg-transparent py-2 px-8 mt-10 text-original rounded-sm
+            hover:bg-original hover:text-white transition-all duration-700'>
+            READ MORE
+            </button>
         </div>
 
         <div className="relative">
-            <img src='/images/aboutus-bg.svg' alt="aboutus-bg" className='w-full h-screen' />
+            <img src='/images/about-page-bg.svg' alt="aboutus-bg" className='w-full h-screen' />
 
             <div className="absolute bottom-28 -right-28">
                 <Image src="/images/bomb2.svg" alt="image" width={450} height={450} />
             </div>
         </div>
     </div>
+    </>
   )
 }
+
+export default About;

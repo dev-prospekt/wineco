@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function HomePage() {
   return (
-    <div className="homepage grid grid-cols-2 h-full">
+    <div className="homepage grid grid-cols-2 h-full min-[450px]:px-5">
         <div className="flex items-center justify-center relative">
             <p className='font-butlerregular text-5xl leading-snug'>
                 <span className='text-original'>CHEERS</span> to the <span className='text-original'>WORLD </span>

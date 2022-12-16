@@ -1,8 +1,9 @@
 import Image from 'next/image'
+import CustomButton from './customButton'
 
 export default function WineList() {
   return (
-    <div className="homepage grid grid-cols-2 h-full">
+    <div className="winelist grid grid-cols-2 h-full">
 
         <div className="relative">
             <img src='/images/winelistbg.svg' alt="winelistbg" className='w-full h-screen' />
@@ -37,23 +38,11 @@ export default function WineList() {
                     By clicking the button you can download wine lists:
                 </p>
 
-                <div className='grid grid-cols-2 gap-5'>
-                    <button className='border-original border bg-transparent py-2 px-8 text-original rounded-sm
-                    hover:bg-original hover:text-white transition-all duration-700'>
-                    Aura
-                    </button>
-                    <button className='border-original border bg-transparent py-2 px-8 text-original rounded-sm
-                    hover:bg-original hover:text-white transition-all duration-700'>
-                    UVOZNI PROGRAM
-                    </button>
-                    <button className='border-original border bg-transparent py-2 px-8 text-original rounded-sm
-                    hover:bg-original hover:text-white transition-all duration-700'>
-                    Moët Hennessy
-                    </button>
-                    <button className='border-original border bg-transparent py-2 px-8 text-original rounded-sm
-                    hover:bg-original hover:text-white transition-all duration-700'>
-                    VINSKA KARTA
-                    </button>
+                <div className='grid grid-cols-2 gap-5 mt-10'>
+                    <CustomButton title='Aura' />
+                    <CustomButton title='UVOZNI PROGRAM' />
+                    <CustomButton title='Moët Hennessy' />
+                    <CustomButton title='VINSKA KARTA' />
                 </div>
             </div>
         </div>
