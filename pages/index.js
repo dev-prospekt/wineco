@@ -6,6 +6,8 @@ import OurBrands from "../components/ourBrands";
 import Blog from "../components/blog";
 import ContactUs from "../components/contactUs";
 
+import Head from 'next/head'
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, EffectFade, Pagination, Navigation } from 'swiper';
 import 'swiper/css';
@@ -15,38 +17,44 @@ import 'swiper/css/pagination';
 
 export default function Home() {
   return (
-    <Swiper
-      modules={[EffectFade, Mousewheel, Pagination, Navigation]} 
-      effect="fade"
-      speed={800}
-      direction="vertical"
-      mousewheel={true}
-      navigation
-      pagination={{ clickable: true }}
-      slidesPerView={1}
-      className="max-w-7xl m-auto"
-    >
-      <SwiperSlide>
-        <HomePage />
-      </SwiperSlide>
-      <SwiperSlide>
-        <AboutUs />
-      </SwiperSlide>
-      <SwiperSlide>
-        <WineList />
-      </SwiperSlide>
-      <SwiperSlide>
-        <WineShop />
-      </SwiperSlide>
-      <SwiperSlide>
-        <OurBrands />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Blog />
-      </SwiperSlide>
-      <SwiperSlide>
-        <ContactUs />
-      </SwiperSlide>
-    </Swiper>
+    <>
+      <Head>
+          <title>Wineco</title>
+      </Head>
+      
+      <Swiper
+        modules={[EffectFade, Mousewheel, Pagination, Navigation]} 
+        effect="fade"
+        speed={700}
+        direction="vertical"
+        mousewheel={true}
+        navigation
+        pagination={{ clickable: true }}
+        slidesPerView={1}
+        className="max-w-7xl m-auto"
+      >
+        <SwiperSlide>
+          <HomePage />
+        </SwiperSlide>
+        <SwiperSlide>
+          <AboutUs />
+        </SwiperSlide>
+        <SwiperSlide>
+          <WineList />
+        </SwiperSlide>
+        <SwiperSlide>
+          <WineShop />
+        </SwiperSlide>
+        <SwiperSlide>
+          <OurBrands />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Blog />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ContactUs />
+        </SwiperSlide>
+      </Swiper>
+    </>
   )
 }

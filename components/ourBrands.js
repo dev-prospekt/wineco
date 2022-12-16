@@ -1,7 +1,11 @@
 import Image from 'next/image'
+import Script from 'next/script'
 
 export default function OurBrands() {
   return (
+    <>
+    <Script src='/js/script.js'></Script>
+
     <div className="homepage grid h-full">
 
         <div className="flex flex-col justify-center items-center relative mt-40">
@@ -21,7 +25,7 @@ export default function OurBrands() {
                 </p>
             </div>
 
-            <div>
+            <div className='relative'>
                 <img src="/country/france.svg" useMap="#image-map" id="mapa" alt='map' />
                 <map name="image-map">
                     <area target="" className='cursor-pointer' alt="France" title="france" coords="-1,55,104,1,194,42,194,175,66,195" shape="poly" />
@@ -33,22 +37,23 @@ export default function OurBrands() {
             </div>
 
             <div className="flex justify-center gap-24 w-full">
-                <Image src="/country/matosevic.svg" alt="image" width={70} height={70} className='cursor-pointer' />
-                <Image src="/country/krapez.svg" alt="image" width={70} height={70} className='cursor-pointer' />
-                <Image src="/country/sutor.svg" alt="image" width={70} height={70} className='cursor-pointer' />
-                <Image src="/country/cuj.svg" alt="image" width={70} height={70} className='cursor-pointer' />
-                <Image src="/country/tonkovic.svg" alt="image" width={70} height={70} className='cursor-pointer' />
+                <Image src="/country/matosevic.svg" alt="image" id="checkImage" data-title="slovenia" width={70} height={70} className='cursor-pointer' />
+                <Image src="/country/krapez.svg" alt="image" id="checkImage" data-title="france" width={70} height={70} className='cursor-pointer' />
+                <Image src="/country/sutor.svg" alt="image" id="checkImage" data-title="croatian" width={70} height={70} className='cursor-pointer' />
+                <Image src="/country/cuj.svg" alt="image" id="checkImage" data-title="italy" width={70} height={70} className='cursor-pointer' />
+                <Image src="/country/tonkovic.svg" alt="image" id="checkImage" data-title="serbia" width={70} height={70} className='cursor-pointer' />
             </div>
 
             <div className="flex justify-center gap-24 w-full mt-10 mb-10">
-                <Image src="/country/matosevic.svg" alt="image" width={70} height={70} className='cursor-pointer' />
-                <Image src="/country/krapez.svg" alt="image" width={70} height={70} className='cursor-pointer' />
-                <Image src="/country/sutor.svg" alt="image" width={70} height={70} className='cursor-pointer' />
-                <Image src="/country/cuj.svg" alt="image" width={70} height={70} className='cursor-pointer' />
-                <Image src="/country/tonkovic.svg" alt="image" width={70} height={70} className='cursor-pointer' />
+                <Image src="/country/matosevic.svg" alt="image" id="checkImage" data-title="france" width={70} height={70} className='cursor-pointer' />
+                <Image src="/country/krapez.svg" alt="image" id="checkImage" data-title="croatian" width={70} height={70} className='cursor-pointer' />
+                <Image src="/country/sutor.svg" alt="image" id="checkImage" data-title="italy" width={70} height={70} className='cursor-pointer' />
+                <Image src="/country/cuj.svg" alt="image" id="checkImage" data-title="serbia" width={70} height={70} className='cursor-pointer' />
+                <Image src="/country/tonkovic.svg" alt="image" id="checkImage" data-title="slovenia" width={70} height={70} className='cursor-pointer' />
             </div>
 
         </div>
     </div>
+    </>
   )
 }
