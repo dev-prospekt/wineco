@@ -26,9 +26,6 @@ export default function Home() {
   useEffect(() => {
     $('a#navLink').on('click', function() {
       toSlide($(this).attr('data-key'))
-
-      $(".fullscreenmenu").removeClass('-translate-y-0')
-      $(".fullscreenmenu").addClass('-translate-y-full')
     })
   })
 
