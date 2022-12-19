@@ -26,7 +26,7 @@ export default function OurBrands() {
             </div>
 
             <div className='relative'>
-                <img src="/country/france.svg" useMap="#image-map" id="mapa" alt='map' />
+                <img src="/country/croatian.svg" useMap="#image-map" id="mapa" alt='map' />
                 <map name="image-map">
                     <area target="" className='cursor-pointer' alt="France" title="france" coords="-1,55,104,1,194,42,194,175,66,195" shape="poly" />
                     <area target="" className='cursor-pointer' alt="Italy" title="italy" coords="194,117,194,161,231,149,308,323,376,237,275,131,297,101,244,91" shape="poly" />

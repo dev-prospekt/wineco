@@ -21,20 +21,20 @@ export default function WineList() {
             <h1 className='font-butlerregular text-5xl text-original mb-7'>WINE LIST</h1>
 
             <div className='text-lg font-avenirmedium'>
-                <p className='mb-3'>
+                <p className='mb-10'>
                     In our wine list you can find wines from.... 
                     Aliquam lorem elementum vel eget pellentesque turpis augue aenean ipsum. 
                     Sit porttitor nascetur cursus eu. A morbi adipiscing tortor est diam viverra posuere.
                 </p>
 
-                <p className='mb-3'>
+                <p className='mb-10'>
                     Ac convallis proin ac, augue nunc, duis etiam non pellentesque. 
                     Cras consectetur nec dictum ipsum mollis molestie turpis adipiscing. 
                     Purus facilisis viverra eget sed pretium congue consequat. 
                     Vel consectetur vel luctus senectus varius amet vel. 
                 </p>
 
-                <p className='mb-3'>
+                <p className='mb-10'>
                     By clicking the button you can download wine lists:
                 </p>
 

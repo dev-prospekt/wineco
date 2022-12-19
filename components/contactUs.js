@@ -9,19 +9,19 @@ export default function ContactUs() {
 
             <div className='text-lg font-avenirmedium'>
                 <div className='mb-10'>
-                    <p className='text-original font-butlerregular text-3xl font-extrabold'>Wine&Co d.o.o.</p>
+                    <p className='text-original font-butlerregular text-3xl font-extrabold mb-3'>Wine&Co d.o.o.</p>
                     <p>Milutina Barača 5,</p>
                     <p>51000 Rijeka, Croatia</p>
                 </div>
 
                 <div className='mb-10'>
-                    <p className='text-original font-butlerregular text-3xl font-extrabold'>Contact</p>
-                    <p>Phone: <span className='text-original'>+385 (0) 99 311 9497</span></p>
-                    <p>Email: <span className='text-original'>info@wine-co.hr</span></p>
+                    <p className='text-original font-butlerregular text-3xl font-extrabold mb-3'>Contact</p>
+                    <p>Phone: <span className='text-original'><a href="tel:+3850993119497">+385 (0) 99 311 9497</a></span></p>
+                    <p>Email: <span className='text-original'><a href="mailto:info@wine-co.hr">info@wine-co.hr</a></span></p>
                 </div>
 
                 <div className=''>
-                    <p className='text-original font-butlerregular text-3xl font-extrabold'>Follow Us</p>
+                    <p className='text-original font-butlerregular text-3xl font-extrabold mb-3'>Follow Us</p>
 
                     <div className='flex gap-4'>
                         <Image src="/images/face-icon.svg" width={50} height={50} alt='facebook' />
@@ -39,9 +39,9 @@ export default function ContactUs() {
             </div>
         </div>
 
-        {/* <div className="absolute bottom-0">
-            <Image src="/images/grozd.svg" alt="image" width={800} height={450} />
-        </div> */}
+        <div className="absolute bottom-0 left-32">
+            <Image src="/images/grozd.svg" alt="image" width={900} height={900} />
+        </div>
     </div>
   )
 }
