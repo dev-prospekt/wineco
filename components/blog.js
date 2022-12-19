@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import CustomButton from './customButton'
+import { blogLists } from '../json/data';
 
 export default function Blog() {
     return (
@@ -13,61 +14,29 @@ export default function Blog() {
                 <h1 className='font-butlerregular text-5xl text-original mb-7'>BLOG</h1>
 
                 <div className='flex gap-6 mb-10'>
-                    
-                    <div className='bg-white overflow-hidden rounded-lg max-w-xs shadow-original-shadow'>
-                        <Image src='/images/blog1.png' width={360} height={270} alt='blog' />
 
-                        <div className='p-5'>
-                            <p className='font-extrabold text-lg text-original font-butlerregular tracking-widest mb-4'>
-                                LOREM IPSUM DOLOR SIT AMET
-                            </p>
+                    { blogLists.slice(-3).map((blog, key) => (
+                        <div key={key} className='bg-white overflow-hidden rounded-lg max-w-xs shadow-original-shadow'>
+                            <a href={`/blog/${blog.id}`}>
+                                <Image src={blog.image} width={360} height={270} alt='blog' />
 
-                            <p className='text-textcolor text-base font-light mb-4'>
-                                Massa tempus enim malesuada ornare. Neque consequat elit nulla id integer egestas a.
-                            </p>
+                                <div className='p-5'>
+                                    <p className='font-extrabold text-lg text-original font-butlerregular tracking-widest mb-4'>
+                                        { blog.name }
+                                    </p>
 
-                            <span className='text-original text-base font-bold flex items-center'>
-                                <Image src='/images/date-icon.svg' width={15} height={15} alt='date icon' className='mr-2' />
-                                2. studenog, 2022.
-                            </span>
+                                    <p className='text-textcolor text-base font-light mb-4'>
+                                        { blog.desc }
+                                    </p>
+
+                                    <span className='text-original text-base font-bold flex items-center'>
+                                        <Image src='/images/date-icon.svg' width={15} height={15} alt='date icon' className='mr-2' />
+                                        { blog.date }
+                                    </span>
+                                </div>
+                            </a>
                         </div>
-                    </div>
-                    <div className='bg-white overflow-hidden rounded-lg max-w-xs shadow-original-shadow'>
-                        <Image src='/images/blog1.png' width={360} height={270} alt='blog' />
-
-                        <div className='p-5'>
-                            <p className='font-extrabold text-lg text-original font-butlerregular tracking-widest mb-4'>
-                                LOREM IPSUM DOLOR SIT AMET
-                            </p>
-
-                            <p className='text-textcolor text-base font-light mb-4'>
-                                Massa tempus enim malesuada ornare. Neque consequat elit nulla id integer egestas a.
-                            </p>
-
-                            <span className='text-original text-base font-bold flex items-center'>
-                                <Image src='/images/date-icon.svg' width={15} height={15} alt='date icon' className='mr-2' />
-                                2. studenog, 2022.
-                            </span>
-                        </div>
-                    </div>
-                    <div className='bg-white overflow-hidden rounded-lg max-w-xs shadow-original-shadow'>
-                        <Image src='/images/blog1.png' width={360} height={270} alt='blog' />
-
-                        <div className='p-5'>
-                            <p className='font-extrabold text-lg text-original font-butlerregular tracking-widest mb-4'>
-                                LOREM IPSUM DOLOR SIT AMET
-                            </p>
-
-                            <p className='text-textcolor text-base font-light mb-4'>
-                                Massa tempus enim malesuada ornare. Neque consequat elit nulla id integer egestas a.
-                            </p>
-
-                            <span className='text-original text-base font-bold flex items-center'>
-                                <Image src='/images/date-icon.svg' width={15} height={15} alt='date icon' className='mr-2' />
-                                2. studenog, 2022.
-                            </span>
-                        </div>
-                    </div>
+                    )).reverse() }
 
                 </div>
                 

@@ -20,8 +20,8 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-image: url('/images/bg.svg');
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  background-size: cover;
+  background-position: top center;
   overflow: hidden;
   height: 100vh;
   background-color: #fcfaf8;
@@ -30,8 +30,8 @@ body {
 body.aboutus-page {
   background-image: url('/images/bg.svg');
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  background-size: cover;
+  background-position: top center;
   background-attachment: fixed;
   overflow-y: auto;
   overflow-x: hidden;
