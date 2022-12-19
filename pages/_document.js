@@ -8,7 +8,7 @@ export default function Document() {
         <link rel="icon" href="/favicon.ico" />
 
         <script src='https://code.jquery.com/jquery-3.6.2.min.js'></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js'></script>
+        <script src='/js/jquery.rwdImageMaps.min.js'></script>
       </Head>
 
       <body>
