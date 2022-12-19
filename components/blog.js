@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import CustomButton from './customButton'
 import { blogLists } from '../json/data';
 
@@ -17,7 +18,7 @@ export default function Blog() {
 
                     { blogLists.slice(-3).map((blog, key) => (
                         <div key={key} className='bg-white overflow-hidden rounded-lg max-w-xs shadow-original-shadow'>
-                            <a href={`/blog/${blog.id}`}>
+                            <Link href={`/blog/${blog.id}`}>
                                 <Image src={blog.image} width={360} height={270} alt='blog' />
 
                                 <div className='p-5'>
@@ -34,7 +35,7 @@ export default function Blog() {
                                         { blog.date }
                                     </span>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                     )).reverse() }
 

@@ -16,8 +16,16 @@ export default function Layout({ children }) {
 
   return (
     <>
+      <div>
+      {isLoading ? (
+        <div className="loader-container">
+          <div className="spinner"></div>
+        </div>
+      ) : ('')}
+      </div>
+
       <Navbar />
-      
+        
       <main>
         {children}
       </main>
