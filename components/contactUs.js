@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { useTranslation } from 'next-i18next'
 
 export default function ContactUs() {
@@ -27,8 +28,13 @@ export default function ContactUs() {
                         <p className='text-original font-butlerregular text-3xl font-extrabold mb-3'>{t("Follow Us")}</p>
 
                         <div className='flex gap-4'>
-                            <Image src="/images/face-icon.svg" width={50} height={50} alt='facebook' />
-                            <Image src="/images/insta-icon.svg" width={50} height={50} alt='instagram' />
+                            <Link href="https://www.facebook.com/" target={'_blank'}>
+                                <Image src="/images/face-icon.svg" width={50} height={50} alt='facebook' />
+                            </Link>
+
+                            <Link href="https://www.instagram.com" target={'_blank'}>
+                                <Image src="/images/insta-icon.svg" width={50} height={50} alt='instagram' />
+                            </Link>
                         </div>
                     </div>
                 </div>

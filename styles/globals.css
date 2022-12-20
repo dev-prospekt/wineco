@@ -103,33 +103,61 @@ a {
 
 
 
-
-
-.loader-container {
+#globalLoader {
+  position: absolute;
+  z-index: 9999;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.930);
   width: 100%;
-  height: 100vh;
-  display: flex;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  background: #AB8844;
-  z-index: 999999999;
+  display: flex;
 }
 
-.spinner {
-  width: 64px;
-  height: 64px;
-  border: 8px solid;
-  border-color: #fff transparent #fff transparent;
-  border-radius: 50%;
-  animation: spin-anim 2s linear infinite;
+#globalLoader::after {
+  content: "";
+  position: absolute;
+  z-index: 9999;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #AB8844;
+  animation: 2.5s scroli forwards;
+  animation-delay: .2s;
 }
-
-@keyframes spin-anim {
+@keyframes scroli {
   0% {
-    transform: rotate(0deg);
+    width: 50%;
+  }
+  60% {
+    transform: rotateY(90deg);
   }
   100% {
-    transform: rotate(360deg);
+    width: 100%;
+  }
+}
+
+#globalLoader .logo-loader {
+  opacity: 0;
+  transition: all;
+  animation: 1s logoloader forwards;
+  animation-delay: 1s;
+  z-index: 99999;
+}
+@keyframes logoloader {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
   }
 }

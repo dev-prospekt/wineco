@@ -1,25 +1,23 @@
 import Navbar from './navbar'
 import Footer from './footer'
+import Image from 'next/image'
 import React, { useState, useEffect } from "react";
 
 export default function Layout({ children }) {
-  const [isLoading, setLoading] = useState(false)
+  const [isLoading, setLoading] = useState(true)
 
   useEffect(() => {
-    setLoading(true)
-    
     setInterval(() => {
       setLoading(false)
     }, 3000);
-
   }, [])
 
   return (
     <>
       <div>
       {isLoading ? (
-        <div className="loader-container">
-          <div className="spinner"></div>
+        <div id="globalLoader">
+          <Image className='logo-loader' src="/images/logo_white.svg" width={150} height={150} alt="logo" />
         </div>
       ) : ('')}
       </div>
