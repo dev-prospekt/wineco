@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-function LanguageSwitcher() {
+function LanguageSwitcher({open}) {
     const router = useRouter();
     
     const handleLocaleChange = (event) => {
@@ -13,9 +13,10 @@ function LanguageSwitcher() {
 
     return(
         <div>
-            <select onChange={handleLocaleChange} value={router.locale}>
-                <option value="en">ENG</option>
-                <option value="hr">HR</option>
+            <select onChange={handleLocaleChange} value={router.locale} 
+            className={`bg-transparent outline-none border-none ${open ? "text-white" : "text-black"}`}>
+                <option value="en" className={`${open ? "text-black" : "text-black"}`}>EN</option>
+                <option value="hr" className={`${open ? "text-black" : "text-black"}`}>HR</option>
             </select>
         </div>
     )

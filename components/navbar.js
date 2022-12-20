@@ -36,7 +36,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="search">
-                  <LanguageSwitcher />
+                  <LanguageSwitcher open={open} />
                 </div>
               </div>
           </div>
