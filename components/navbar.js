@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import LanguageSwitcher from './LanguageSwitcher';
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
 
@@ -48,10 +49,16 @@ export default function Navbar() {
 
 
 function FullScreenMenu({open, setOpen}) {
+  const router = useRouter();
+
   const openHambClick = (event) => {
     event.preventDefault();
 
     setOpen(!open)
+
+    if(document.body.classList.value != ''){
+      router.push("/");
+    }
   };
   
   return (
