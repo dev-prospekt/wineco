@@ -13,10 +13,16 @@ export const getStaticProps = async ({ params }) => {
     };
 };
 
-export const getStaticPaths = async () => {
-    const paths = blogLists.map((blog) => ({
+export const getStaticPaths = async ({locales}) => {
+    // const paths = blogLists.map((blog) => (
+    //     {params: { blogId: blog.id.toString() }, locale: 'en'},
+    //     {params: { blogId: blog.id.toString() }, locale: 'hr'}
+    // ));
+
+    const paths = blogLists.map((blog) => locales.map((locale) => ({
         params: { blogId: blog.id.toString() },
-    }));
+        locale
+    }))).flat()
 
     return { 
         paths,
