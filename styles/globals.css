@@ -126,13 +126,15 @@ a {
   height: 100%;
   background-color: #AB8844;
   animation: 2.5s scroli forwards;
-  animation-delay: .2s;
+  animation-delay: .4s;
+  animation-timing-function: ease-in-out
 }
 @keyframes scroli {
   0% {
-    width: 50%;
+    width: 100%;
   }
-  60% {
+  50% {
+    width: 50%;
     transform: rotateY(90deg);
   }
   100% {
