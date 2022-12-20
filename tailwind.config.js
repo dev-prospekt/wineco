@@ -16,6 +16,9 @@ module.exports = {
       },
       boxShadow: {
         'original-shadow': '0px 10px 40px rgba(171, 136, 68, 0.1)',
+      },
+      zIndex: {
+        '-1': '-1',
       }
     },
   },

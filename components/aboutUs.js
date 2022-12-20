@@ -36,7 +36,10 @@ export default function AboutUs() {
                 <p className='mb-10 font-bold'>Hvala na povjerenju i živjeli!</p>
             </div>
 
-            <CustomButton title='READ MORE' link='/about' />
+            <a href='/about' className='border-original border bg-transparent py-2 px-8 text-original rounded-sm
+        hover:bg-original hover:text-white transition-all duration-700 text-center cursor-pointer'>
+                READ MORE
+            </a>
         </div>
 
         <div className="relative">

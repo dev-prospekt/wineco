@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
 
@@ -35,7 +36,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="search">
-                  <Image src={`${open ? "/images/search_white.svg" : "/images/search.svg"}`} alt="image" width={25} height={25} />
+                  <LanguageSwitcher />
                 </div>
               </div>
           </div>

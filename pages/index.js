@@ -16,6 +16,17 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+export const getServerSideProps = async ({ locale }) => ({
+  props: {
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'contact',
+      ]))
+  }
+});
+
 export default function Home() {
   const swiperRef = useRef(null);
 

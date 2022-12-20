@@ -1,22 +1,19 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import CustomButton from './customButton'
+import CustomButton from '../components/customButton'
 import { blogLists } from '../json/data';
 
-export default function Blog() {
+export default function Blogs() {
     return (
-        <div className="blog grid h-full">
+        <div className="blog grid h-full max-w-7xl m-auto">
 
             <div className="flex flex-col justify-center items-center relative mt-40">
-                <div className="absolute bottom-4 -left-48 -z-1">
-                    <Image src="/images/bomb1.svg" alt="image" width={500} height={500} />
-                </div>
 
                 <h1 className='font-butlerregular text-5xl text-original mb-7'>BLOG</h1>
 
-                <div className='flex gap-6 mb-10'>
+                <div className='grid grid-cols-4 gap-6 mb-10'>
 
-                    { blogLists.slice(-3).map((blog, key) => (
+                    { blogLists.map((blog, key) => (
                         <div key={key} className='bg-white overflow-hidden rounded-lg max-w-xs shadow-original-shadow'>
                             <Link href={`/blog/${blog.id}`}>
                                 <Image src={blog.image} width={360} height={270} alt='blog' />
@@ -40,8 +37,6 @@ export default function Blog() {
                     )).reverse() }
 
                 </div>
-                
-                <CustomButton title='VIEW ALL' link='/blogs' />
 
             </div>
         </div>

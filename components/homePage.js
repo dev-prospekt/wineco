@@ -10,11 +10,11 @@ export default function HomePage() {
                     with <span className='text-original'>WINE&CO</span>
                 </p>
 
-                <div className="absolute top-28 right-24 bomb">
+                <div className="absolute top-28 right-24 bomb -z-1">
                     <Image src="/images/bomb.svg" alt="image" width={300} height={300} />
                 </div>
 
-                <div className="absolute bottom-4 -left-48">
+                <div className="absolute bottom-4 -left-48 -z-1">
                     <Image src="/images/bomb1.svg" alt="image" width={500} height={500} />
                 </div>
 
