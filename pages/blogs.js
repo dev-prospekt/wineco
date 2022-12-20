@@ -1,10 +1,23 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head'
+import { useEffect } from 'react';
 import CustomButton from '../components/customButton'
 import { blogLists } from '../json/data';
 
 export default function Blogs() {
+
+    useEffect(() => {        
+        document.body.classList = '';
+        document.body.classList.add("blogs-page");
+    });
+
     return (
+        <>
+        <Head>
+            <title>Wineco - Blogs</title>
+        </Head>
+
         <div className="blog grid h-full max-w-7xl m-auto">
 
             <div className="flex flex-col justify-center items-center relative mt-40">
@@ -24,7 +37,7 @@ export default function Blogs() {
                                     </p>
 
                                     <p className='text-textcolor text-base font-light mb-4'>
-                                        { blog.desc }
+                                        { blog.desc.substring(0, 100) + "..." }
                                     </p>
 
                                     <span className='text-original text-base font-bold flex items-center'>
@@ -40,5 +53,6 @@ export default function Blogs() {
 
             </div>
         </div>
+        </>
     )
 }

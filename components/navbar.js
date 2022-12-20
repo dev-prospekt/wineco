@@ -58,33 +58,33 @@ function FullScreenMenu({open, setOpen}) {
       <div className={`fullscreenmenu absolute top-0 left-0 h-screen w-screen transform ${open ? "-translate-y-0" : "-translate-y-full"} 
       transition-transform duration-500 ease-in-out filter`}>
          
-          <div className="flex flex-col justify-center items-center mt-48">
+          <div className="flex flex-col justify-center items-center mt-48 max-[400px]:mt-36">
             <Link href='' id="navLink" data-key="0" onClick={openHambClick}
-            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white">
+            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
               HOMEPAGE
             </Link>
             <Link href='' id="navLink" data-key="1" onClick={openHambClick}
-            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white">
+            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
               ABOUT US
             </Link>
             <Link href='' id="navLink" data-key="2" onClick={openHambClick}
-            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white">
+            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
               WINE LIST
             </Link>
             <Link href='' id="navLink" data-key="3" onClick={openHambClick}
-            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white">
+            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
               WINE SHOP
             </Link>
             <Link href='' id="navLink" data-key="4" onClick={openHambClick}
-            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white">
+            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
               OUR BRANDS
             </Link>
             <Link href='' id="navLink" data-key="5" onClick={openHambClick}
-            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white">
+            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
               BLOG
             </Link>
             <Link href='' id="navLink" data-key="6" onClick={openHambClick}
-            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white">
+            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
               CONTACT US
             </Link>
           </div>  

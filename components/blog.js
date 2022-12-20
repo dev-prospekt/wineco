@@ -2,8 +2,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import CustomButton from './customButton'
 import { blogLists } from '../json/data';
+import { useTranslation } from 'next-i18next'
 
 export default function Blog() {
+    const { t } = useTranslation('common')
+
     return (
         <div className="blog grid h-full">
 
@@ -27,7 +30,7 @@ export default function Blog() {
                                     </p>
 
                                     <p className='text-textcolor text-base font-light mb-4'>
-                                        { blog.desc }
+                                        { blog.desc.substring(0, 100) + "..." }
                                     </p>
 
                                     <span className='text-original text-base font-bold flex items-center'>
@@ -41,7 +44,7 @@ export default function Blog() {
 
                 </div>
                 
-                <CustomButton title='VIEW ALL' link='/blogs' />
+                <CustomButton title={t("VIEW ALL")} link='/blogs' />
 
             </div>
         </div>

@@ -2,6 +2,8 @@ import { blogLists } from '../../json/data';
 import NextLink from 'next/link';
 import Image from 'next/image'
 import CustomButton from '../../components/customButton';
+import { useEffect } from 'react';
+import { useTranslation } from 'next-i18next'
 
 export const getStaticProps = async ({ params }) => {
     const blogListsList = blogLists.filter((p) => p.id.toString() === params.blogId);
@@ -31,22 +33,29 @@ export const getStaticPaths = async ({locales}) => {
 };
 
 export default ({ blog }) => {
+    useEffect(() => {
+        document.body.classList = '';
+        document.body.classList.add("blog-single-page");
+    });
+
+    const { t } = useTranslation('common')
+
     return (
         <>
-        <div className="about-page grid grid-cols-2 max-w-7xl m-auto mb-10">
+        <div className="about-page grid grid-cols-2 max-w-7xl m-auto mb-20">
 
-            <div className="flex flex-col justify-between items-start relative mr-36 mt-40 mb-5 pl-10">
+            <div className="flex flex-col justify-between items-start relative mr-36 py-40">
                 <h1 className='font-butlerregular text-5xl text-original'>{blog.name}</h1>
 
 
                 <div className='text-lg font-avenirmedium'>
-                    <p className='mb-3'>
+                    <p className='mb-2'>
                         {blog.desc}
                     </p>
                 </div>
 
                 <div>
-                    <CustomButton title='Back' link='/blogs' />
+                    <CustomButton title={t("BACK")} link='/blogs' />
                 </div>
             </div>
 

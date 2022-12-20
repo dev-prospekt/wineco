@@ -1,3 +1,6 @@
 {
-    "greeting": "Hello world!"
+    "greeting": "Hello world!",
+    "VIEW ALL": "VIEW ALL",
+    "READ MORE": "READ MORE",
+    "BACK": "BACK"
 }

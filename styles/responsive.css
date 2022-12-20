@@ -2,7 +2,43 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    
+    .homepage {
+        grid-template-columns: auto;
+    }
+
+    .homepage > div:first-child {
+        align-items: flex-start;
+        padding-top: 60%;
+    }
+
+    .homepage > div:first-child > div:last-child {
+        top: 0px;
+    }
+    .homepage > div:first-child > div:last-child img {
+        width: 60px;
+    }
+
+    .homepage > div:first-child .bomb {
+        width: 100px;
+    }
+
+    .homepage > div:last-child {
+        position: absolute;
+        bottom: 0px;
+        max-width: 100%;
+        left: 0px;
+        right: 20px;
+    }
+    .homepage > div:last-child > img {
+        height: 450px;
+    }
+
+    .homepage > div:last-child > div {
+        right: -50%;
+    }
+    .homepage > div:last-child > div > img {
+        height: 200px;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

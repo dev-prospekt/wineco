@@ -18,13 +18,13 @@ export default function ContactUs() {
                     </div>
 
                     <div className='mb-10'>
-                        <p className='text-original font-butlerregular text-3xl font-extrabold mb-3'>Contact</p>
-                        <p>Phone: <span className='text-original'><a href="tel:+3850993119497">+385 (0) 99 311 9497</a></span></p>
+                        <p className='text-original font-butlerregular text-3xl font-extrabold mb-3'>{t("Contact")}</p>
+                        <p>{t("Phone")}: <span className='text-original'><a href="tel:+3850993119497">+385 (0) 99 311 9497</a></span></p>
                         <p>Email: <span className='text-original'><a href="mailto:info@wine-co.hr">info@wine-co.hr</a></span></p>
                     </div>
 
                     <div className=''>
-                        <p className='text-original font-butlerregular text-3xl font-extrabold mb-3'>Follow Us</p>
+                        <p className='text-original font-butlerregular text-3xl font-extrabold mb-3'>{t("Follow Us")}</p>
 
                         <div className='flex gap-4'>
                             <Image src="/images/face-icon.svg" width={50} height={50} alt='facebook' />

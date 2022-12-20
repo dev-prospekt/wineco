@@ -1,3 +1,6 @@
 {
-    "greeting": "Hello world!"
+    "greeting": "Hello world!",
+    "VIEW ALL": "POGLEDAJ SVE",
+    "READ MORE": "SAZNAJ VIŠE",
+    "BACK": "NAZAD"
 }
