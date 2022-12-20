@@ -2,9 +2,9 @@ import Image from 'next/image'
 
 export default function HomePage() {
     return (
-        <div className="homepage grid grid-cols-2 h-full min-[450px]:px-5">
+        <div className="homepage grid grid-cols-2 h-full max-[1250px]:px-5">
             <div className="flex items-center justify-center relative">
-                <p className='font-butlerregular text-5xl leading-snug'>
+                <p className='font-butlerregular text-5xl leading-snug max-[450px]:text-3xl'>
                     <span className='text-original'>CHEERS</span> to the <span className='text-original'>WORLD </span>
                     of <span className='text-original'>PREMIUM WINES </span>
                     with <span className='text-original'>WINE&CO</span>
