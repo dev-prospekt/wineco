@@ -3,17 +3,6 @@ import Footer from './footer'
 import Image from 'next/image'
 import React, { useState, useEffect } from "react";
 
-export async function getServerSideProps({ req, res }) {
-  res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=10, stale-while-revalidate=59'
-  )
-
-  return {
-    props: {},
-  }
-}
-
 export default function Layout({ children }) {
   const [isLoading, setLoading] = useState(true)
 
