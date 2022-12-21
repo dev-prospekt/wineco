@@ -33,52 +33,30 @@ export default function Blogs() {
 
                 <div className='grid grid-cols-3 gap-6 mb-10'>
 
-                { 
-                    size.width < 600 ?
-                    blogLists.slice(-1).map((blog, key) => (
-                        <div key={key} className='bg-white overflow-hidden rounded-lg max-w-17rem shadow-original-shadow'>
-                            <Link href={`/blog/${blog.id}`}>
-                                <Image src={blog.image} width={360} height={270} alt='blog' className='h-32 object-cover' />
+                {
+                blogLists.map((blog, key) => (
+                    <div key={key} className='bg-white overflow-hidden rounded-lg max-w-17rem shadow-original-shadow'>
+                        <Link href={`/blog/${blog.id}`}>
+                            <Image src={blog.image} width={360} height={270} alt='blog' className='h-32 object-cover' />
 
-                                <div className='p-5'>
-                                    <p className='font-extrabold text-lg text-original font-butlerregular tracking-widest mb-4'>
-                                        { blog.name }
-                                    </p>
+                            <div className='p-5'>
+                                <p className='font-extrabold text-lg text-original font-butlerregular tracking-widest mb-4'>
+                                    { blog.name }
+                                </p>
 
-                                    <p className='text-textcolor text-base font-light mb-4'>
-                                        { blog.desc.substring(0, 100) + "..." }
-                                    </p>
+                                <p className='text-textcolor text-base font-light mb-4'>
+                                    { blog.desc.substring(0, 100) + "..." }
+                                </p>
 
-                                    <span className='text-original text-base font-bold flex items-center'>
-                                        <Image src='/images/date-icon.svg' width={15} height={15} alt='date icon' className='mr-2' />
-                                        { blog.date }
-                                    </span>
-                                </div>
-                            </Link>
-                        </div>
-                    )).reverse() : blogLists.slice(-3).map((blog, key) => (
-                        <div key={key} className='bg-white overflow-hidden rounded-lg max-w-xs shadow-original-shadow'>
-                            <Link href={`/blog/${blog.id}`}>
-                                <Image src={blog.image} width={360} height={270} alt='blog' />
-
-                                <div className='p-5'>
-                                    <p className='font-extrabold text-lg text-original font-butlerregular tracking-widest mb-4'>
-                                        { blog.name }
-                                    </p>
-
-                                    <p className='text-textcolor text-base font-light mb-4'>
-                                        { blog.desc.substring(0, 100) + "..." }
-                                    </p>
-
-                                    <span className='text-original text-base font-bold flex items-center'>
-                                        <Image src='/images/date-icon.svg' width={15} height={15} alt='date icon' className='mr-2' />
-                                        { blog.date }
-                                    </span>
-                                </div>
-                            </Link>
-                        </div>
-                    )).reverse()
-                    }
+                                <span className='text-original text-base font-bold flex items-center'>
+                                    <Image src='/images/date-icon.svg' width={15} height={15} alt='date icon' className='mr-2' />
+                                    { blog.date }
+                                </span>
+                            </div>
+                        </Link>
+                    </div>
+                )).reverse()
+                }
 
                 </div>
 
