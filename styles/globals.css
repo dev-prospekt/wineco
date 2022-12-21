@@ -27,7 +27,9 @@ body {
   background-color: #fcfaf8;
 }
 
-body.aboutus-page {
+body.blogs-page,
+body.about-page,
+body.blog-single-page {
   background-image: url('/images/bg.svg');
   background-repeat: no-repeat;
   background-size: cover;

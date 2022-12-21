@@ -22,9 +22,13 @@ export default function Blogs() {
 
             <div className="flex flex-col justify-center items-center relative mt-40">
 
+                <div className="absolute -left-48">
+                    <Image src="/images/bomb1.svg" alt="image" width={500} height={500} />
+                </div>
+
                 <h1 className='font-butlerregular text-5xl text-original mb-7'>BLOG</h1>
 
-                <div className='grid grid-cols-4 gap-6 mb-10'>
+                <div className='grid grid-cols-3 gap-6 mb-10'>
 
                     { blogLists.map((blog, key) => (
                         <div key={key} className='bg-white overflow-hidden rounded-lg max-w-xs shadow-original-shadow'>
