@@ -1,3 +1,4 @@
+DirectoryIndex disabled
 RewriteEngine On
 RewriteRule ^$ http://127.0.0.1:8080/ [P,L]
 RewriteCond %{REQUEST_FILENAME} !-f
