@@ -9,9 +9,9 @@ export default function AboutUs() {
         <div className="aboutus grid grid-cols-2 h-full">
 
             <div className="flex flex-col justify-center items-start relative mr-36 mt-40 max-[600px]:mt-36">
-                <h1 className='font-butlerregular text-5xl text-original'>ABOUT US</h1>
+                <h1 className='font-butlerregular text-5xl text-original max-[600px]:text-3xl'>ABOUT US</h1>
 
-                <div className='my-10'>
+                <div className='my-10 max-[600px]:my-5'>
                     <div className='relative mb-7 max-[600px]:mb-2'>
                         <hr className='bg-original h-0.5' />
                         <Image src={'/images/zup.svg'} alt="wine" width={50} height={50} 
