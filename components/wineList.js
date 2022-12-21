@@ -24,7 +24,7 @@ export default function WineList() {
                 <h1 className='font-butlerregular text-5xl text-original mb-7 max-[600px]:text-3xl'>{t("winelisttitle")}</h1>
 
                 <div className='text-lg font-avenirmedium'>
-                    <p className='mb-10'>
+                    <p className='mb-10 text-textcolor'>
                     {t("winelist")}
                     </p>
 

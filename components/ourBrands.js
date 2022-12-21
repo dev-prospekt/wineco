@@ -20,7 +20,7 @@ export default function OurBrands() {
             <h1 className='font-butlerregular text-5xl text-original mb-7 max-[600px]:text-3xl'>OUR BRANDS</h1>
 
             <div className='text-lg font-avenirmedium text-center'>
-                <p className='mb-3'>
+                <p className='mb-3 text-textcolor'>
                     By clicking on the map, you can see our brands from each country.
                 </p>
             </div>

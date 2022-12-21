@@ -34,7 +34,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className='text-lg font-avenirmedium'>
+                <div className='text-lg font-avenirmedium text-textcolor'>
                     <p className='mb-3'>
                         <strong>Wine&Co</strong> specijalizirana je veleprodaja vina, žestokih pića i popratnog asortimana.
                         Naši kupci su ponajbolji restorani, hoteli ali i sve više privatni kupci.

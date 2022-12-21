@@ -32,7 +32,7 @@ export default function AboutUs() {
                     </div>
                 </div>
 
-                <div className='text-lg font-avenirmedium mb-10'>
+                <div className='text-lg font-avenirmedium mb-10 text-textcolor'>
                     <p className='mb-10 max-[600px]:mb-2'>
                         <strong>Wine&Co</strong> specijalizirana je veleprodaja vina, žestokih pića i popratnog asortimana.
                         Naši kupci su ponajbolji restorani, hoteli ali i sve više privatni kupci.

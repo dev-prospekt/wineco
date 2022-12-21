@@ -14,14 +14,14 @@ export default function ContactUs() {
                 <div className='text-lg font-avenirmedium'>
                     <div className='mb-10'>
                         <p className='text-original font-butlerregular text-3xl font-extrabold mb-3'>Wine&Co d.o.o.</p>
-                        <p>Milutina Barača 5,</p>
-                        <p>51000 Rijeka, Croatia</p>
+                        <p className='text-textcolor'>Milutina Barača 5,</p>
+                        <p className='text-textcolor'>51000 Rijeka, Croatia</p>
                     </div>
 
                     <div className='mb-10'>
                         <p className='text-original font-butlerregular text-3xl font-extrabold mb-3'>{t("Contact")}</p>
-                        <p>{t("Phone")}: <span className='text-original'><a href="tel:+3850993119497">+385 (0) 99 311 9497</a></span></p>
-                        <p>Email: <span className='text-original'><a href="mailto:info@wine-co.hr">info@wine-co.hr</a></span></p>
+                        <p className='text-textcolor'>{t("Phone")}: <span className='text-original'><a href="tel:+3850993119497">+385 (0) 99 311 9497</a></span></p>
+                        <p className='text-textcolor'>Email: <span className='text-original'><a href="mailto:info@wine-co.hr">info@wine-co.hr</a></span></p>
                     </div>
 
                     <div className=''>
