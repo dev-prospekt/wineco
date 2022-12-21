@@ -8,7 +8,7 @@ export default function OurBrands() {
 
     <div className="ourbrands grid h-full">
 
-        <div className="flex flex-col justify-center items-center relative mt-40">
+        <div className="flex flex-col justify-center items-center relative mt-40 max-[600px]:justify-start">
             <div className="absolute bottom-4 -left-48 max-[600px]:-z-1">
                 <Image src="/images/bomb1.svg" alt="image" width={500} height={500} />
             </div>
