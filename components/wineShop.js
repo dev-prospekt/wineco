@@ -13,15 +13,8 @@ export default function WineShop() {
 
                 <div className='text-lg font-avenirmedium mb-10'>
                     <p className='mb-10'>
-                        <strong>Wine&Co</strong> specijalizirana je veleprodaja vina, žestokih pića i popratnog asortimana.
-                        Naši kupci su ponajbolji restorani, hoteli ali i sve više privatni kupci.
+                    {t("wineshop")}
                     </p>
-
-                    <p className='mb-10'>
-                        S obzirom na naše dugogodišnje iskustvo, direktno surađujemo s većinom vinara što olakšava i ubrzava put od proizvođača do Vas.
-                    </p>
-
-                    <p className='mb-10'>Hvala na povjerenju i živjeli!</p>
                 </div>
 
                 <CustomButton title={t("READ MORE")} />
