@@ -8,7 +8,7 @@ export default function Footer() {
 
         <div className='py-16 grid grid-cols-3 px-5'>
           <div className='logo-footer'>
-            <Image src='/images/logo.svg' width={150} height={150} />
+            <Image src='/images/logo.svg' width={150} height={150} alt='logo' />
           </div>
 
           <div>

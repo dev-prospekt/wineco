@@ -65,9 +65,7 @@ export default ({ blog }) => {
                             { blog.date }
                         </span>
 
-                        <p className='mt-5'>
-                            {blog.desc}
-                        </p>
+                        <p className='mt-5' dangerouslySetInnerHTML={{ __html: blog.desc }} />
                     </div>
                 </div>
 

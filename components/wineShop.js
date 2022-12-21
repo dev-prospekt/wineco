@@ -9,7 +9,7 @@ export default function WineShop() {
         <div className="wineshop grid grid-cols-2 h-full">
 
             <div className="flex flex-col justify-center items-start relative mr-36 mt-40">
-                <h1 className='font-butlerregular text-5xl text-original mb-7'>WINE SHOP</h1>
+                <h1 className='font-butlerregular text-5xl text-original mb-7'>{t("wineshoptitle")}</h1>
 
                 <div className='text-lg font-avenirmedium mb-10'>
                     <p className='mb-10'>

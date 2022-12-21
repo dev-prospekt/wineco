@@ -8,6 +8,7 @@ import ContactUs from "../components/contactUs";
 
 import Head from 'next/head'
 import React, { useState, useRef, useEffect } from "react";
+import { useRouter } from 'next/router';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, EffectFade, Pagination, Navigation } from 'swiper';
@@ -27,8 +28,10 @@ export const getServerSideProps = async ({ locale }) => ({
   }
 });
 
-export default function Home() {
+export default function Home({props}) {
   const swiperRef = useRef(null);
+  const router = useRouter();
+  const {pid} = router.query;
 
   const toSlide = (num) => {
     swiperRef.current?.swiper.slideTo(num);
@@ -38,6 +41,10 @@ export default function Home() {
     $('a#navLink').on('click', function() {
       toSlide($(this).attr('data-key'))
     })
+
+    if(pid){
+      toSlide(pid)
+    }
   })
 
   return (

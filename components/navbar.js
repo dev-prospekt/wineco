@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import LanguageSwitcher from './LanguageSwitcher';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 
 export default function Navbar() {
 
@@ -57,7 +57,10 @@ function FullScreenMenu({open, setOpen}) {
     setOpen(!open)
 
     if(document.body.classList.value != ''){
-      router.push("/");
+      router.push({
+        pathname: '/',
+        query: { pid: event.target.getAttribute("data-key") },
+      }, '/');
     }
   };
   
