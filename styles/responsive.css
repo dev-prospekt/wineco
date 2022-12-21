@@ -94,6 +94,26 @@
     .winelist > div:last-child {
         margin-right: 0px;
     }
+    /* WINE LIST */
+
+    /* WINE SHOP */
+    .wineshop {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 30px;
+    }
+    .wineshop > div:first-child {
+        margin-right: 0px;
+    }
+    .wineshop > div:last-child {
+        position: absolute;
+        bottom: 0px;
+        width: 50%;
+        height: 70%;
+        right: 35px;
+        z-index: -1;
+    }
+    /* WINE SHOP */
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
