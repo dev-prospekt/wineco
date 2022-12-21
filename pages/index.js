@@ -11,7 +11,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from 'next/router';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Mousewheel, EffectFade, Pagination, Navigation } from 'swiper';
+import { Mousewheel, EffectFade, Pagination, Navigation, Scrollbar } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
@@ -53,11 +53,12 @@ export default function Home({props}) {
         <title>Wineco</title>
       </Head>
       
-      <Swiper modules={[EffectFade, Mousewheel, Pagination]} ref={swiperRef} 
+      <Swiper modules={[EffectFade, Mousewheel, Pagination, Scrollbar]} ref={swiperRef} 
         effect="fade" speed={700}
         direction="vertical" mousewheel={true} allowTouchMove={false}
         pagination
         slidesPerView={1}
+        scrollbar={{ draggable: true }}
         className="max-w-7xl m-auto"
       >
         <SwiperSlide>
