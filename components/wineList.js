@@ -28,12 +28,12 @@ export default function WineList() {
                     {t("winelist")}
                     </p>
 
-                    <div className='grid grid-cols-2 gap-5 mt-10'>
+                    {/* <div className='grid grid-cols-2 gap-5 mt-10'>
                         <CustomButton title='Aura' />
                         <CustomButton title='UVOZNI PROGRAM' />
                         <CustomButton title='Moët Hennessy' />
                         <CustomButton title='VINSKA KARTA' />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
