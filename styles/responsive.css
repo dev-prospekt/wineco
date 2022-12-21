@@ -6,6 +6,10 @@
         right: 10px !important;
     }
 
+    p {
+        font-size: 16px;
+    }
+
     /* HOMEPAGE */
     .homepage {
         grid-template-columns: auto;

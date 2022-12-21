@@ -8,7 +8,7 @@ export default function AboutUs() {
     return (
         <div className="aboutus grid grid-cols-2 h-full">
 
-            <div className="flex flex-col justify-center items-start relative mr-36 mt-40">
+            <div className="flex flex-col justify-center items-start relative mr-36 mt-40 max-[600px]:mt-36">
                 <h1 className='font-butlerregular text-5xl text-original'>ABOUT US</h1>
 
                 <div className='my-10'>
@@ -18,10 +18,10 @@ export default function AboutUs() {
                         className='zup absolute left-0 -top-5 bg-white max-[600px]:w-5 max-[600px]:-top-1' />
                     </div>
 
-                    <p className='text-original text-base italic mx-12 font-avenirmedium max-[600px]:mx-7'>
+                    <p className='text-original text-base italic mx-12 font-avenirmedium max-[600px]:mx-7 max-[600px]:text-xs'>
                         Vino je među pićima najkorisnije, među lijekovima najukusnije, a od hrane najugodnije.
                     </p>
-                    <p className='text-original text-base italic mx-12 mt-5 font-avenirmedium max-[600px]:mx-7'>
+                    <p className='text-original text-base italic mx-12 mt-5 font-avenirmedium max-[600px]:mx-7 max-[600px]:text-xs'>
                         Plutarch von Charona
                     </p>
                     

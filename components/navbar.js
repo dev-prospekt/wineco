@@ -20,7 +20,7 @@ export default function Navbar() {
 
       <div>
           <div className="header z-50 fixed right-0 left-0 max-w-7xl m-auto max-[1250px]:px-5">
-              <div className="flex items-center justify-between z-50 relative py-10">
+              <div className="flex items-center justify-between z-50 relative py-10 max-[600px]:py-5">
                 <div className="group z-50 relative w-8 h-6 flex-col justify-between items-center flex cursor-pointer" onClick={openHambClick}>
                     <span className={`first-span h-1 w-full bg-original rounded-lg transform transition duration-300 ease-in-out 
                     ${open ? "rotate-45 translate-y-2.5 bg-white" : ""}`} />
