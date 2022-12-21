@@ -114,6 +114,20 @@
         z-index: -1;
     }
     /* WINE SHOP */
+
+    /* OUR BRANDS */
+    .ourbrands {
+        padding: 0px 30px;
+    }
+    .ourbrands > div {
+        width: 100%;
+    }
+    .ourbrands #mapa {
+        width: 100%;
+        min-width: 100%;
+        margin: auto;
+    }
+    /* OUR BRANDS */
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

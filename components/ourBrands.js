@@ -9,11 +9,11 @@ export default function OurBrands() {
     <div className="ourbrands grid h-full">
 
         <div className="flex flex-col justify-center items-center relative mt-40">
-            <div className="absolute bottom-4 -left-48">
+            <div className="absolute bottom-4 -left-48 max-[600px]:-z-1">
                 <Image src="/images/bomb1.svg" alt="image" width={500} height={500} />
             </div>
 
-            <div className="absolute bottom-28 -right-28">
+            <div className="absolute bottom-28 -right-28 max-[600px]:-z-1">
                 <Image src="/images/bomb2.svg" alt="image" width={450} height={450} />
             </div>
 
@@ -36,20 +36,12 @@ export default function OurBrands() {
                 </map>
             </div>
 
-            <div className="flex justify-center gap-24 w-full">
+            <div className="flex justify-center gap-24 w-full max-[600px]:flex-wrap max-[600px]:gap-4">
                 <Image src="/country/matosevic.svg" alt="image" id="checkImage" data-title="slovenia" width={70} height={70} className='cursor-pointer' />
                 <Image src="/country/krapez.svg" alt="image" id="checkImage" data-title="france" width={70} height={70} className='cursor-pointer' />
                 <Image src="/country/sutor.svg" alt="image" id="checkImage" data-title="croatian" width={70} height={70} className='cursor-pointer' />
                 <Image src="/country/cuj.svg" alt="image" id="checkImage" data-title="italy" width={70} height={70} className='cursor-pointer' />
                 <Image src="/country/tonkovic.svg" alt="image" id="checkImage" data-title="serbia" width={70} height={70} className='cursor-pointer' />
-            </div>
-
-            <div className="flex justify-center gap-24 w-full mt-10 mb-10">
-                <Image src="/country/matosevic.svg" alt="image" id="checkImage" data-title="france" width={70} height={70} className='cursor-pointer' />
-                <Image src="/country/krapez.svg" alt="image" id="checkImage" data-title="croatian" width={70} height={70} className='cursor-pointer' />
-                <Image src="/country/sutor.svg" alt="image" id="checkImage" data-title="italy" width={70} height={70} className='cursor-pointer' />
-                <Image src="/country/cuj.svg" alt="image" id="checkImage" data-title="serbia" width={70} height={70} className='cursor-pointer' />
-                <Image src="/country/tonkovic.svg" alt="image" id="checkImage" data-title="slovenia" width={70} height={70} className='cursor-pointer' />
             </div>
 
         </div>
