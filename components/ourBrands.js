@@ -17,7 +17,7 @@ export default function OurBrands() {
                 <Image src="/images/bomb2.svg" alt="image" width={450} height={450} />
             </div>
 
-            <h1 className='font-butlerregular text-5xl text-original mb-7'>OUR BRANDS</h1>
+            <h1 className='font-butlerregular text-5xl text-original mb-7 max-[600px]:text-3xl'>OUR BRANDS</h1>
 
             <div className='text-lg font-avenirmedium text-center'>
                 <p className='mb-3'>

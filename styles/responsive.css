@@ -10,6 +10,11 @@
         font-size: 14px;
     }
 
+    a#navLink {
+        font-size: 20px;
+        margin: 0px;
+    }
+
     /* HOMEPAGE */
     .homepage {
         grid-template-columns: auto;
@@ -112,7 +117,7 @@
     .wineshop > div:last-child {
         position: absolute;
         bottom: 0px;
-        width: 50%;
+        width: 30%;
         height: 70%;
         right: 35px;
         z-index: -1;
@@ -132,6 +137,28 @@
         margin: auto;
     }
     /* OUR BRANDS */
+
+    /* CONTACT US */
+    .contactus {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 20px;
+    }
+    .contactus > div:first-child {
+        margin-right: 0px;
+    }
+    .contactus > div:nth-child(2) {
+        position: absolute;
+        width: 30%;
+        height: 70%;
+        bottom: 0px;
+        right: 0px;
+        display: inline;
+    }
+    .contactus > div:last-child {
+        left: 0px;
+    }
+    /* CONTACT US */
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

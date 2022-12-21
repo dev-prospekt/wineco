@@ -21,7 +21,7 @@ export default function WineList() {
             </div>
 
             <div className="flex flex-col justify-center items-start relative mr-36 mt-40">
-                <h1 className='font-butlerregular text-5xl text-original mb-7'>{t("winelisttitle")}</h1>
+                <h1 className='font-butlerregular text-5xl text-original mb-7 max-[600px]:text-3xl'>{t("winelisttitle")}</h1>
 
                 <div className='text-lg font-avenirmedium'>
                     <p className='mb-10'>

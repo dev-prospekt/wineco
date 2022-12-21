@@ -17,7 +17,7 @@ export default function Blog() {
                     <Image src="/images/bomb1.svg" alt="image" width={500} height={500} />
                 </div>
 
-                <h1 className='font-butlerregular text-5xl text-original mb-7'>BLOG</h1>
+                <h1 className='font-butlerregular text-5xl text-original mb-7 max-[600px]:text-3xl'>BLOG</h1>
 
                 <div className='flex gap-6 mb-10 max-[600px]:flex-wrap max-[600px]:justify-center'>
 

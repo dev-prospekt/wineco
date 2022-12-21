@@ -9,7 +9,7 @@ export default function ContactUs() {
         <div className="contactus grid grid-cols-2 h-full">
 
             <div className="flex flex-col justify-center items-start relative mr-36 mt-40">
-                <h1 className='font-butlerregular text-5xl text-original mb-10'>{t("title")}</h1>
+                <h1 className='font-butlerregular text-5xl text-original mb-10 max-[600px]:text-3xl'>{t("title")}</h1>
 
                 <div className='text-lg font-avenirmedium'>
                     <div className='mb-10'>
