@@ -2,6 +2,11 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    .swiper-pagination {
+        right: 10px !important;
+    }
+
+    /* HOMEPAGE */
     .homepage {
         grid-template-columns: auto;
     }
@@ -39,6 +44,90 @@
     .homepage > div:last-child > div > img {
         height: 200px;
     }
+    /* HOMEPAGE */
+
+    /* ABOUT US */
+    .aboutus {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 30px;
+    }
+    .aboutus > div:first-child {
+        margin-right: 0px;
+    }
+    .aboutus > div:last-child {
+        position: absolute;
+        bottom: 0px;
+        z-index: -1;
+    }
+    .aboutus > div:last-child > img {
+        width: 50%;
+        height: 100%;
+        opacity: 0.3;
+        display: inline;
+    }
+    .aboutus > div:last-child > div > img {
+        width: 70%;
+    }
+    /* ABOUT US */
+
+    /* WINE LIST */
+    .winelist {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 30px;
+    }
+
+    .winelist > div:first-child {
+        position: absolute;
+        bottom: 0px;
+    }
+    .winelist > div:first-child > .bomb {
+        width: 50%;
+        right: 0px;
+    }
+    .winelist > div:first-child > img {
+        width: 40%;
+        height: 100%;
+        display: inline;
+    }
+    .winelist > div:last-child {
+        margin-right: 0px;
+    }
+    /* WINE LIST */
+
+    /* WINE SHOP */
+    .wineshop {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 30px;
+    }
+    .wineshop > div:first-child {
+        margin-right: 0px;
+    }
+    .wineshop > div:last-child {
+        position: absolute;
+        bottom: 0px;
+        width: 50%;
+        height: 70%;
+        right: 35px;
+        z-index: -1;
+    }
+    /* WINE SHOP */
+
+    /* OUR BRANDS */
+    .ourbrands {
+        padding: 0px 30px;
+    }
+    .ourbrands > div {
+        width: 100%;
+    }
+    .ourbrands #mapa {
+        width: 100%;
+        min-width: 100%;
+        margin: auto;
+    }
+    /* OUR BRANDS */
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

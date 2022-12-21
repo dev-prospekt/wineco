@@ -12,31 +12,37 @@ export default function AboutUs() {
                 <h1 className='font-butlerregular text-5xl text-original'>ABOUT US</h1>
 
                 <div className='my-10'>
-                    <div className='relative mb-7'>
+                    <div className='relative mb-7 max-[600px]:mb-2'>
                         <hr className='bg-original h-0.5' />
-                        <Image src={'/images/zup.svg'} alt="wine" width={50} height={50} className='absolute left-0 -top-5 bg-white' />
+                        <Image src={'/images/zup.svg'} alt="wine" width={50} height={50} 
+                        className='zup absolute left-0 -top-5 bg-white max-[600px]:w-5 max-[600px]:-top-1' />
                     </div>
 
-                    <p className='text-original text-base italic mx-12 font-avenirmedium'>Vino je među pićima najkorisnije, među lijekovima najukusnije, a od hrane najugodnije.</p>
-                    <p className='text-original text-base italic mx-12 mt-5 font-avenirmedium'>Plutarch von Charona</p>
+                    <p className='text-original text-base italic mx-12 font-avenirmedium max-[600px]:mx-7'>
+                        Vino je među pićima najkorisnije, među lijekovima najukusnije, a od hrane najugodnije.
+                    </p>
+                    <p className='text-original text-base italic mx-12 mt-5 font-avenirmedium max-[600px]:mx-7'>
+                        Plutarch von Charona
+                    </p>
                     
-                    <div className='relative mt-7'>
+                    <div className='relative mt-7 max-[600px]:mt-2'>
                         <hr className='bg-original h-0.5' />
-                        <Image src={'/images/zdown.svg'} alt="wine" width={50} height={50} className='absolute right-0 -top-2.5 bg-white' />
+                        <Image src={'/images/zdown.svg'} alt="wine" width={50} height={50} 
+                        className='zdown absolute right-0 -top-2.5 bg-white max-[600px]:w-5 max-[600px]:-top-1' />
                     </div>
                 </div>
 
                 <div className='text-lg font-avenirmedium mb-10'>
-                    <p className='mb-10'>
+                    <p className='mb-10 max-[600px]:mb-2'>
                         <strong>Wine&Co</strong> specijalizirana je veleprodaja vina, žestokih pića i popratnog asortimana.
                         Naši kupci su ponajbolji restorani, hoteli ali i sve više privatni kupci.
                     </p>
 
-                    <p className='mb-10'>
+                    <p className='mb-10 max-[600px]:mb-2'>
                         S obzirom na naše dugogodišnje iskustvo, direktno surađujemo s većinom vinara što olakšava i ubrzava put od proizvođača do Vas.
                     </p>
 
-                    <p className='mb-10 font-bold'>Hvala na povjerenju i živjeli!</p>
+                    <p className='mb-10 font-bold max-[600px]:mb-2'>Hvala na povjerenju i živjeli!</p>
                 </div>
 
                 <CustomButton title={t("READ MORE")} link='/about' />
