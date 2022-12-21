@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { useEffect } from 'react';
 import CustomButton from '../components/customButton'
 import { blogLists } from '../json/data';
+import Footer from '../components/footer';
 
 export default function Blogs() {
 
@@ -57,6 +58,8 @@ export default function Blogs() {
 
             </div>
         </div>
+
+        <Footer />
         </>
     )
 }

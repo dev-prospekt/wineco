@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       colors: {
         'original': '#ab8844',
+        'siva': '#767676',
         'textcolor': 'rgba(67, 54, 51, 1)'
       },
       boxShadow: {

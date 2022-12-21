@@ -4,6 +4,7 @@ import Image from 'next/image'
 import CustomButton from '../../components/customButton';
 import { useEffect } from 'react';
 import { useTranslation } from 'next-i18next'
+import Footer from '../../components/footer';
 
 export const getStaticProps = async ({ params }) => {
     const blogListsList = blogLists.filter((p) => p.id.toString() === params.blogId);
@@ -79,7 +80,7 @@ export default ({ blog }) => {
                     <div className='flex gap-6 mb-10 max-[600px]:flex-wrap max-[600px]:justify-center mt-10'>
                     { blogLists.slice(-3).map((blog, key) => (
                         <div key={key} className='bg-white overflow-hidden rounded-lg max-w-xs shadow-original-shadow'>
-                            <Link href={`/blog/${blog.id}`}>
+                            <a href={`/blog/${blog.id}`}>
                                 <Image src={blog.image} width={360} height={270} alt='blog' />
 
                                 <div className='p-5'>
@@ -96,7 +97,7 @@ export default ({ blog }) => {
                                         { blog.date }
                                     </span>
                                 </div>
-                            </Link>
+                            </a>
                         </div>
                     )).reverse() }
                     </div>
@@ -105,6 +106,8 @@ export default ({ blog }) => {
 
             </div>
         </div>
+
+        <Footer />
         </>
     )
 }
