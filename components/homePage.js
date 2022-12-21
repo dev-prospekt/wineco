@@ -19,10 +19,10 @@ export default function HomePage() {
                 </div>
 
                 <div className="absolute bottom-10 left-0 flex justify-between w-full">
-                    <Image src="/images/matosevic.svg" alt="image" width={100} height={100} />
-                    <Image src="/images/krapez.svg" alt="image" width={100} height={100} />
-                    <Image src="/images/sutor.svg" alt="image" width={100} height={100} />
-                    <Image src="/images/cuj.svg" alt="image" width={100} height={100} />
+                    <Image src="/images/laurent.svg" alt="image" width={100} height={100} />
+                    <Image src="/images/bosco.svg" alt="image" width={100} height={100} />
+                    <Image src="/images/franz.svg" alt="image" width={100} height={100} />
+                    <Image src="/images/marcveti.svg" alt="image" width={100} height={100} />
                 </div>
             </div>
 
