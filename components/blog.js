@@ -12,7 +12,7 @@ export default function Blog() {
     return (
         <div className="blog grid h-full">
 
-            <div className="flex flex-col justify-center items-center relative mt-40">
+            <div className="flex flex-col justify-center items-center relative mt-40 max-[600px]:mt-32">
                 <div className="absolute bottom-4 -left-48 -z-1">
                     <Image src="/images/bomb1.svg" alt="image" width={500} height={500} />
                 </div>
@@ -24,9 +24,9 @@ export default function Blog() {
                     { 
                     size.width < 600 ?
                     blogLists.slice(-1).map((blog, key) => (
-                        <div key={key} className='bg-white overflow-hidden rounded-lg max-w-xs shadow-original-shadow'>
+                        <div key={key} className='bg-white overflow-hidden rounded-lg max-w-17rem shadow-original-shadow'>
                             <Link href={`/blog/${blog.id}`}>
-                                <Image src={blog.image} width={360} height={270} alt='blog' />
+                                <Image src={blog.image} width={360} height={270} alt='blog' className='h-32 object-cover' />
 
                                 <div className='p-5'>
                                     <p className='font-extrabold text-lg text-original font-butlerregular tracking-widest mb-4'>

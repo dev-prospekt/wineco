@@ -10,6 +10,9 @@ module.exports = {
       avenirmedium: ["avenir-medium", "sans-serif"],
     },
     extend: {
+      maxWidth: {
+        '17rem': '17rem',
+      },
       colors: {
         'original': '#ab8844',
         'siva': '#767676',
@@ -24,7 +27,7 @@ module.exports = {
       spacing: {
         '475': '475px',
         '0.1': '0.1rem',
-        '0.2': '0.2rem'
+        '0.2': '0.2rem',
       }
     },
   },
