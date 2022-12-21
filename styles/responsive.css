@@ -2,6 +2,11 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    .swiper-pagination {
+        right: 10px !important;
+    }
+
+    /* HOMEPAGE */
     .homepage {
         grid-template-columns: auto;
     }
@@ -39,6 +44,7 @@
     .homepage > div:last-child > div > img {
         height: 200px;
     }
+    /* HOMEPAGE */
 
     /* ABOUT US */
     .aboutus {
@@ -58,6 +64,7 @@
         width: 50%;
         height: 100%;
         opacity: 0.3;
+        display: inline;
     }
     .aboutus > div:last-child > div > img {
         width: 70%;
