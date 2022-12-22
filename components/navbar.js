@@ -70,7 +70,7 @@ function FullScreenMenu({open, setOpen}) {
       <div className={`fullscreenmenu absolute top-0 left-0 h-screen w-screen transform ${open ? "-translate-y-0" : "-translate-y-full"} 
       transition-transform duration-500 ease-in-out filter`}>
          
-          <div className="flex flex-col justify-center items-center mt-48 max-[400px]:mt-36">
+          <div className="navigat flex flex-col justify-center items-center mt-48 max-[400px]:mt-36">
             <Link href='' id="navLink" data-key="0" onClick={openHambClick}
             className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
               {t("homepagenav")}
