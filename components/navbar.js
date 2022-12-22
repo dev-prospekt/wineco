@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import LanguageSwitcher from './LanguageSwitcher';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next'
 
 export default function Navbar() {
 
@@ -50,6 +51,7 @@ export default function Navbar() {
 
 function FullScreenMenu({open, setOpen}) {
   const router = useRouter();
+  const { t } = useTranslation('common')
 
   const openHambClick = (event) => {
     event.preventDefault();
@@ -71,31 +73,31 @@ function FullScreenMenu({open, setOpen}) {
           <div className="flex flex-col justify-center items-center mt-48 max-[400px]:mt-36">
             <Link href='' id="navLink" data-key="0" onClick={openHambClick}
             className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
-              HOMEPAGE
+              {t("homepagenav")}
             </Link>
             <Link href='' id="navLink" data-key="1" onClick={openHambClick}
             className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
-              ABOUT US
+              {t("aboutusnav")}
             </Link>
             <Link href='' id="navLink" data-key="2" onClick={openHambClick}
             className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
-              WINE LIST
+              {t("winelistnav")}
             </Link>
             <Link href='' id="navLink" data-key="3" onClick={openHambClick}
             className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
-              WINE SHOP
+              {t("wineshopnav")}
             </Link>
             <Link href='' id="navLink" data-key="4" onClick={openHambClick}
             className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
-              OUR BRANDS
+              {t("ourbrandsnav")}
             </Link>
             <Link href='' id="navLink" data-key="5" onClick={openHambClick}
             className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
-              BLOG
+              {t("blognav")}
             </Link>
             <Link href='' id="navLink" data-key="6" onClick={openHambClick}
             className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
-              CONTACT US
+              {t("contactusnav")}
             </Link>
           </div>  
       </div>

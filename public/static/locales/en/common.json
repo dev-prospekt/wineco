@@ -1,4 +1,11 @@
 {
+    "homepagenav": "HOMEPAGE",
+    "aboutusnav": "ABOUT US",
+    "winelistnav": "WINE LIST",
+    "wineshopnav": "WINE SHOP",
+    "ourbrandsnav": "OUR BRANDS",
+    "blognav": "BLOG",
+    "contactusnav": "CONTACT US",
     "greeting": "Hello world!",
     "VIEW ALL": "VIEW ALL",
     "ABOUTUS": "ABOUT US",

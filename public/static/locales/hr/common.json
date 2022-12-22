@@ -1,4 +1,11 @@
 {
+    "homepagenav": "NASLOVNICA",
+    "aboutusnav": "O NAMA",
+    "winelistnav": "VINSKE KARTE",
+    "wineshopnav": "VINOTEKA",
+    "ourbrandsnav": "NAŠI BRENDOVI",
+    "blognav": "BLOG",
+    "contactusnav": "KONTAKTIRAJTE NAS",
     "greeting": "Hello world!",
     "VIEW ALL": "POGLEDAJ SVE",
     "ABOUTUS": "O NAMA",

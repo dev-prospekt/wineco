@@ -44,7 +44,7 @@ export default function AboutUs() {
                     <p className='mb-10 font-bold max-[600px]:mb-2'>{t("aboutus3")}</p>
                 </div>
 
-                <CustomButton title={t("READ MORE")} link='/about' />
+                {/* <CustomButton title={t("READ MORE")} link='/about' /> */}
             </div>
 
             <div className="relative">
