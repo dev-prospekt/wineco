@@ -24,7 +24,7 @@ export default function OurBrands() {
 
                 <div className='text-lg font-avenirmedium text-center'>
                     <p className='mb-3 text-textcolor'>
-                        By clicking on the map, you can see our brands from each country.
+                        {t("OURBRANDSTXT")}
                     </p>
                 </div>
 
