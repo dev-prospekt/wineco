@@ -4,6 +4,7 @@ import CustomButton from './customButton'
 import { blogLists } from '../json/data';
 import { useTranslation } from 'next-i18next'
 import React, { useState, useRef, useEffect } from "react";
+import BlogItem from './blogItem';
 
 export default function Blog() {
     const { t } = useTranslation('common')
@@ -12,7 +13,7 @@ export default function Blog() {
     return (
         <div className="blog grid h-full">
 
-            <div className="flex flex-col justify-center items-center relative mt-40 max-[600px]:mt-32 max-[400px]:mt-24">
+            <div className="flex flex-col justify-center items-center relative mt-40 max-[600px]:mt-32 max-[400px]:mt-16">
                 <div className="absolute bottom-4 -left-48 -z-1">
                     <Image src="/images/bomb1.svg" alt="image" width={500} height={500} />
                 </div>
@@ -25,45 +26,11 @@ export default function Blog() {
                     size.width < 600 ?
                     blogLists.slice(-1).map((blog, key) => (
                         <div key={key} className='bg-white overflow-hidden rounded-lg max-w-17rem shadow-original-shadow'>
-                            <Link href={`/blog/${blog.id}`}>
-                                <Image src={blog.image} width={360} height={270} alt='blog' className='h-32 object-cover' />
-
-                                <div className='p-5'>
-                                    <p className='font-extrabold text-lg text-original font-butlerregular tracking-widest mb-4'>
-                                        { blog.name }
-                                    </p>
-
-                                    <p className='text-textcolor text-base font-light mb-4'>
-                                        { blog.desc.substring(0, 100) + "..." }
-                                    </p>
-
-                                    <span className='text-original text-base font-bold flex items-center'>
-                                        <Image src='/images/date-icon.svg' width={15} height={15} alt='date icon' className='mr-2' />
-                                        { blog.date }
-                                    </span>
-                                </div>
-                            </Link>
+                            <BlogItem blog={blog} />
                         </div>
                     )).reverse() : blogLists.slice(-3).map((blog, key) => (
-                        <div key={key} className='bg-white overflow-hidden rounded-lg max-w-xs shadow-original-shadow'>
-                            <Link href={`/blog/${blog.id}`}>
-                                <Image src={blog.image} width={360} height={270} alt='blog' />
-
-                                <div className='p-5'>
-                                    <p className='font-extrabold text-lg text-original font-butlerregular tracking-widest mb-4'>
-                                        { blog.name }
-                                    </p>
-
-                                    <p className='text-textcolor text-base font-light mb-4'>
-                                        { blog.desc.substring(0, 100) + "..." }
-                                    </p>
-
-                                    <span className='text-original text-base font-bold flex items-center'>
-                                        <Image src='/images/date-icon.svg' width={15} height={15} alt='date icon' className='mr-2' />
-                                        { blog.date }
-                                    </span>
-                                </div>
-                            </Link>
+                        <div key={key} className='bg-white overflow-hidden rounded-lg max-w-17rem shadow-original-shadow'>
+                            <BlogItem blog={blog} />
                         </div>
                     )).reverse()
                     }

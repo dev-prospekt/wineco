@@ -45,6 +45,7 @@
     }
     .homepage > div:last-child > img {
         height: 450px;
+        z-index: -1;
     }
 
     .homepage > div:last-child > div {
@@ -159,6 +160,17 @@
         left: 0px;
     }
     /* CONTACT US */
+
+    /* ABOUT PAGE */
+    .about-page {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 20px;
+    }
+    .about-page > div:first-child {
+        margin-right: 0px;
+    }
+    /* ABOUT PAGE */
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

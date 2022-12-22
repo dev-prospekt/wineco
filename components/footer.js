@@ -10,7 +10,7 @@ export default function Footer() {
       
       <hr className='bg-original h-px' />
 
-      <div className='py-16 grid grid-cols-3 px-5'>
+      <div className='py-16 grid grid-cols-3 px-5 max-[600px]:flex max-[600px]:flex-col max-[600px]:gap-12'>
         <div className='logo-footer'>
           <Image src='/images/logo.svg' width={150} height={150} alt='logo' />
         </div>
