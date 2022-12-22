@@ -60,7 +60,7 @@ function FullScreenMenu({open, setOpen}) {
       router.push({
         pathname: '/',
         query: { pid: event.target.getAttribute("data-key") },
-      }, '/');
+      });
     }
   };
   

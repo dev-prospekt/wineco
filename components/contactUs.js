@@ -31,11 +31,13 @@ export default function ContactUs() {
 
                         <div className='flex gap-4'>
                             <Link href="https://www.facebook.com/" target={'_blank'}>
-                                <Image src="/images/face-icon.svg" width={50} height={50} alt='facebook' className='max-[600px]:w-9' />
+                                <Image src="/images/face-icon.svg" width={50} height={50} alt='facebook' 
+                                className='max-[600px]:w-9 ease-in-out duration-300 transition-all hover:scale-110' />
                             </Link>
 
                             <Link href="https://www.instagram.com" target={'_blank'}>
-                                <Image src="/images/insta-icon.svg" width={50} height={50} alt='instagram' className='max-[600px]:w-9' />
+                                <Image src="/images/insta-icon.svg" width={50} height={50} alt='instagram' 
+                                className='max-[600px]:w-9 ease-in-out duration-300 transition-all hover:scale-110' />
                             </Link>
                         </div>
                     </div>

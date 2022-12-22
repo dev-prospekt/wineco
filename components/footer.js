@@ -6,7 +6,7 @@ export default function Footer() {
   const router = useRouter();
 
   return (
-    <div className="max-w-7xl m-auto mt-40">
+    <div className="max-w-7xl m-auto mt-40 max-[600px]:mt-24">
       
       <hr className='bg-original h-px' />
 

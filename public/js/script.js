@@ -1,6 +1,6 @@
 
 
-jQuery(document).ready(function($) {
+$(function() {
     $('img[useMap]').rwdImageMaps();
 
     $("area.cursor-pointer").on('click', function() {
@@ -8,11 +8,13 @@ jQuery(document).ready(function($) {
 
         $("#mapa").attr("src", "/country/"+title+".svg");
 
-        $("img#checkImage").each(function(i, e){
+        $("div#checkImage").hide();
+
+        $("div#checkImage").each(function(i, e){
             if($(this).attr('data-title') != title){
                 $(this).hide();
             } else {
-                $(this).show();
+                $(this).css('display', 'flex');
             }
         });
     });
