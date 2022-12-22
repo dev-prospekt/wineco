@@ -17,7 +17,7 @@ export default function WineShop() {
                     </p>
                 </div>
 
-                <CustomButton title={t("READ MORE")} />
+                {/* <CustomButton title={t("READ MORE")} /> */}
             </div>
 
             <div className="relative">

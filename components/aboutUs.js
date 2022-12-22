@@ -19,7 +19,7 @@ export default function AboutUs() {
                     </div>
 
                     <p className='text-original text-base italic mx-12 font-avenirmedium max-[600px]:mx-7 max-[600px]:text-xs'>
-                        Vino je među pićima najkorisnije, među lijekovima najukusnije, a od hrane najugodnije.
+                        {t("aboutusinfo")}
                     </p>
                     <p className='text-original text-base italic mx-12 mt-5 font-avenirmedium max-[600px]:mx-7 max-[600px]:text-xs'>
                         Plutarch von Charona
@@ -34,15 +34,14 @@ export default function AboutUs() {
 
                 <div className='text-lg font-avenirmedium mb-10 text-textcolor'>
                     <p className='mb-10 max-[600px]:mb-2'>
-                        <strong>Wine&Co</strong> specijalizirana je veleprodaja vina, žestokih pića i popratnog asortimana.
-                        Naši kupci su ponajbolji restorani, hoteli ali i sve više privatni kupci.
+                        <strong>Wine&Co</strong> {t("aboutus1")}
                     </p>
 
                     <p className='mb-10 max-[600px]:mb-2'>
-                        S obzirom na naše dugogodišnje iskustvo, direktno surađujemo s većinom vinara što olakšava i ubrzava put od proizvođača do Vas.
+                        {t("aboutus2")}
                     </p>
 
-                    <p className='mb-10 font-bold max-[600px]:mb-2'>Hvala na povjerenju i živjeli!</p>
+                    <p className='mb-10 font-bold max-[600px]:mb-2'>{t("aboutus3")}</p>
                 </div>
 
                 <CustomButton title={t("READ MORE")} link='/about' />
