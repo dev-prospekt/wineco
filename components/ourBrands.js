@@ -55,6 +55,30 @@ export default function OurBrands() {
                     <Image src="/country/vertiz.svg" alt="image" width={70} height={70} className='cursor-pointer' />
                 </div>
 
+                {/* ITALY */}
+                <div id="checkImage" data-title="italy" className="hidden justify-center gap-24 w-full max-[600px]:flex-wrap max-[600px]:gap-4">
+                    <Image src="/country/belavista.svg" alt="image" width={70} height={70} className='cursor-pointer' />
+                    <Image src="/country/bosco.svg" alt="image" width={70} height={70} className='cursor-pointer' />
+                    <Image src="/country/collavini.svg" alt="image" width={70} height={70} className='cursor-pointer' />
+                    <Image src="/images/marcveti.svg" alt="image" width={70} height={70} className='cursor-pointer' />
+                    <Image src="/images/franz.svg" alt="image" width={70} height={70} className='cursor-pointer' />
+                </div>
+
+                {/* FRANCE */}
+                <div id="checkImage" data-title="france" className="hidden justify-center gap-24 w-full max-[600px]:flex-wrap max-[600px]:gap-4">
+                    <Image src="/country/laurent.svg" alt="image" width={70} height={70} className='cursor-pointer' />
+                </div>
+
+                {/* SLOVENIA */}
+                <div id="checkImage" data-title="slovenia" className="hidden justify-center gap-24 w-full max-[600px]:flex-wrap max-[600px]:gap-4">
+                    <Image src="/country/dolfo.svg" alt="image" width={70} height={70} className='cursor-pointer' />
+                    <Image src="/country/guerila.svg" alt="image" width={70} height={70} className='cursor-pointer' />
+                    <Image src="/country/krapez.svg" alt="image" width={70} height={70} className='cursor-pointer' />
+                    <Image src="/country/sutor.svg" alt="image" width={70} height={70} className='cursor-pointer' />
+                    <Image src="/country/svetlik.svg" alt="image" width={70} height={70} className='cursor-pointer' />
+                    <Image src="/country/scurek.svg" alt="image" width={70} height={70} className='cursor-pointer' />
+                </div>
+
             </div>
         </div>
         </>
