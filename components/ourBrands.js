@@ -39,6 +39,7 @@ export default function OurBrands() {
                     </map>
                 </div>
 
+                {/* CROATIA */}
                 <div id="checkImage" data-title="croatian" className="flex justify-center gap-24 w-full max-[600px]:flex-wrap max-[600px]:gap-4">
                     <Image src="/country/bastian.svg" alt="image" width={70} height={70} className='cursor-pointer' />
                     <Image src="/country/cuj.svg" alt="image" width={70} height={70} className='cursor-pointer' />
@@ -48,7 +49,8 @@ export default function OurBrands() {
                     <Image src="/country/skaramuca.svg" alt="image" width={70} height={70} className='cursor-pointer' />
                 </div>
 
-                <div id="checkImage" data-title="serbia" className="flex hidden justify-center gap-24 w-full max-[600px]:flex-wrap max-[600px]:gap-4">
+                {/* SERBIA */}
+                <div id="checkImage" data-title="serbia" className="hidden justify-center gap-24 w-full max-[600px]:flex-wrap max-[600px]:gap-4">
                     <Image src="/country/tonkovic.svg" alt="image" width={70} height={70} className='cursor-pointer' />
                     <Image src="/country/vertiz.svg" alt="image" width={70} height={70} className='cursor-pointer' />
                 </div>
