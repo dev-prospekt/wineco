@@ -1,15 +1,30 @@
 import Image from 'next/image'
-import CustomButton from './customButton'
-import { useTranslation } from 'next-i18next'
+import { i18n, useTranslation } from 'next-i18next'
+import { useState, useEffect } from 'react'
 
-export default function AboutUs() {
-    const { t } = useTranslation('common')
+export default function AboutUs({data}) {
+    const { t, i18n } = useTranslation('common')
+    const [aboutUsData, setAboutUsData] = useState([])
+    
+    useEffect(() => {
+        fetchPost()
+    }, [i18n.language])
+
+    const fetchPost = async () => {
+        await fetch(`http://localhost:1337/api/about-us?locale=${i18n.language}`)
+        .then(response => response.json())
+        .then(json => {
+            setAboutUsData(json.data)
+        })
+    }
 
     return (
         <div className="aboutus grid grid-cols-2 h-full">
 
             <div className="flex flex-col justify-center items-start relative mr-36 mt-40 max-[600px]:mt-36">
-                <h1 className='font-butlerregular text-5xl text-original max-[600px]:text-3xl'>{t("ABOUTUS")}</h1>
+                <h1 className='font-butlerregular text-5xl text-original max-[600px]:text-3xl uppercase'>
+                { aboutUsData.attributes.title }
+                </h1>
 
                 <div className='my-10 max-[600px]:my-5'>
                     <div className='relative mb-7 max-[600px]:mb-2'>

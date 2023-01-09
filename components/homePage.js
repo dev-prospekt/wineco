@@ -1,14 +1,27 @@
 import Image from 'next/image'
+import { useState, useEffect } from 'react'
 
-export default function HomePage() {
+const HomePage = () => {
+    const [homePageData, setHomePageData] = useState([])
+
+    useEffect(() => {
+        fetchPost()
+    }, [])
+
+    const fetchPost = async () => {
+        fetch('http://localhost:1337/api/homepage?populate=*')
+        .then((res) => res.json())
+        .then((data) => {
+            setHomePageData(data.data.attributes)
+        });
+    }
+
     return (
         <div className="homepage grid grid-cols-2 h-full max-[1250px]:px-5">
             <div className="flex items-center justify-center relative">
-                <p className='font-butlerregular text-5xl leading-snug max-[450px]:text-3xl'>
-                    <span className='text-original'>CHEERS</span> to the <span className='text-original'>WORLD </span>
-                    of <span className='text-original'>PREMIUM WINES </span>
-                    with <span className='text-original'>WINE&CO</span>
-                </p>
+
+                <p className='font-butlerregular text-5xl leading-snug max-[450px]:text-3xl' 
+                dangerouslySetInnerHTML={{__html: homePageData.content}} />
 
                 <div className="absolute top-28 right-24 bomb -z-1">
                     <Image src="/images/bomb.svg" alt="image" width={300} height={300} />
@@ -19,10 +32,12 @@ export default function HomePage() {
                 </div>
 
                 <div className="absolute bottom-10 left-0 flex justify-between w-full">
-                    <Image src="/images/laurent.svg" alt="image" width={100} height={100} />
-                    <Image src="/images/bosco.svg" alt="image" width={100} height={100} />
-                    <Image src="/images/franz.svg" alt="image" width={100} height={100} />
-                    <Image src="/images/marcveti.svg" alt="image" width={100} height={100} />
+                    {homePageData.logotip ? homePageData.logotip.data.map((logotip) => {
+                        return(
+                            <img key={logotip.id} src={`http://localhost:1337${logotip.attributes.url}`} 
+                            alt={logotip.attributes.name} width={100} height={100} />
+                        );
+                    }) : '' }
                 </div>
             </div>
 
@@ -37,3 +52,5 @@ export default function HomePage() {
         </div>
     )
 }
+
+export default HomePage;

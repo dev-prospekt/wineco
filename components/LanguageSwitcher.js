@@ -7,7 +7,7 @@ function LanguageSwitcher({open}) {
         const value = event.target.value;
     
         router.push(router.route, router.asPath, {
-          locale: value,
+            locale: value,
         });
     };
 
