@@ -1,9 +1,23 @@
 import Image from 'next/image'
 import CustomButton from './customButton'
-import { useTranslation } from 'next-i18next'
+import { i18n, useTranslation } from 'next-i18next'
+import { useState, useEffect } from 'react'
 
 export default function WineList() {
     const { t } = useTranslation('common')
+    const [data, setData] = useState([])
+    
+    useEffect(() => {
+        fetchPost()
+    }, [i18n.language])
+
+    const fetchPost = async () => {
+        await fetch(`http://localhost:1337/api/wine-list?locale=${i18n.language}`)
+        .then(response => response.json())
+        .then(json => {
+            setData(json.data)
+        })
+    }
 
     return (
         <div className="winelist grid grid-cols-2 h-full">
@@ -21,12 +35,12 @@ export default function WineList() {
             </div>
 
             <div className="flex flex-col justify-center items-start relative mr-36 mt-40">
-                <h1 className='font-butlerregular text-5xl text-original mb-7 max-[600px]:text-3xl'>{t("winelisttitle")}</h1>
+                <h1 className='font-butlerregular text-5xl text-original mb-7 max-[600px]:text-3xl uppercase'>
+                    { data.attributes?.title }
+                </h1>
 
                 <div className='text-lg font-avenirmedium'>
-                    <p className='mb-10 text-textcolor'>
-                    {t("winelist")}
-                    </p>
+                    <p className='mb-10 text-textcolor' dangerouslySetInnerHTML={{__html: data.attributes?.content}} />
 
                     {/* <div className='grid grid-cols-2 gap-5 mt-10'>
                         <CustomButton title='Aura' />

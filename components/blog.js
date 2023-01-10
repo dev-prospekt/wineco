@@ -1,14 +1,27 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import CustomButton from './customButton'
-import { blogLists } from '../json/data';
-import { useTranslation } from 'next-i18next'
+import { i18n, useTranslation } from 'next-i18next'
 import React, { useState, useRef, useEffect } from "react";
 import BlogItem from './blogItem';
 
 export default function Blog() {
     const { t } = useTranslation('common')
     const size = useWindowSize();
+
+    const [data, setData] = useState([])
+    
+    useEffect(() => {
+        fetchPost()
+    }, [i18n.language])
+
+    const fetchPost = async () => {
+        await fetch(`http://localhost:1337/api/blogs?locale=${i18n.language}&populate=*`)
+        .then(response => response.json())
+        .then(json => {
+            setData(json.data)
+        })
+    }
 
     return (
         <div className="blog grid h-full">
@@ -24,11 +37,11 @@ export default function Blog() {
 
                     { 
                     size.width < 600 ?
-                    blogLists.slice(-1).map((blog, key) => (
+                    data.slice(-1).map((blog, key) => (
                         <div key={key} className='bg-white overflow-hidden rounded-lg max-w-17rem shadow-original-shadow'>
                             <BlogItem blog={blog} />
                         </div>
-                    )).reverse() : blogLists.slice(-3).map((blog, key) => (
+                    )).reverse() : data.slice(-3).map((blog, key) => (
                         <div key={key} className='bg-white overflow-hidden rounded-lg max-w-17rem shadow-original-shadow'>
                             <BlogItem blog={blog} />
                         </div>

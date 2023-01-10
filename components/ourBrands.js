@@ -1,9 +1,23 @@
 import Image from 'next/image'
 import Script from 'next/script'
-import { useTranslation } from 'next-i18next'
+import { i18n, useTranslation } from 'next-i18next'
+import { useState, useEffect } from 'react'
 
 export default function OurBrands() {
     const { t } = useTranslation('common')
+    const [data, setData] = useState([])
+    
+    useEffect(() => {
+        fetchPost()
+    }, [i18n.language])
+
+    const fetchPost = async () => {
+        await fetch(`http://localhost:1337/api/our-brand?locale=${i18n.language}`)
+        .then(response => response.json())
+        .then(json => {
+            setData(json.data)
+        })
+    }
 
     return (
         <>
@@ -20,15 +34,15 @@ export default function OurBrands() {
                     <Image src="/images/bomb2.svg" alt="image" width={450} height={450} />
                 </div>
 
-                <h1 className='font-butlerregular text-5xl text-original mb-7 max-[600px]:text-3xl'>{t("OURBRANDS")}</h1>
+                <h1 className='font-butlerregular text-5xl text-original mb-7 max-[600px]:text-3xl uppercase'>
+                    { data.attributes?.title }
+                </h1>
 
                 <div className='text-lg font-avenirmedium text-center'>
-                    <p className='mb-3 text-textcolor'>
-                        {t("OURBRANDSTXT")}
-                    </p>
+                    <p className='mb-3 text-textcolor' dangerouslySetInnerHTML={{__html: data.attributes?.content}} />
                 </div>
 
-                <div className='relative'>
+                <div className='relative w-1/4'>
                     <img src="/country/croatian.svg" useMap="#image-map" id="mapa" alt='map' />
                     <map name="image-map">
                         <area target="" className='cursor-pointer' alt="France" title="france" coords="-1,55,104,1,194,42,194,175,66,195" shape="poly" />

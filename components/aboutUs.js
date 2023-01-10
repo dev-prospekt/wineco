@@ -23,7 +23,7 @@ export default function AboutUs({data}) {
 
             <div className="flex flex-col justify-center items-start relative mr-36 mt-40 max-[600px]:mt-36">
                 <h1 className='font-butlerregular text-5xl text-original max-[600px]:text-3xl uppercase'>
-                { aboutUsData.attributes.title }
+                { aboutUsData.attributes?.title }
                 </h1>
 
                 <div className='my-10 max-[600px]:my-5'>
@@ -33,12 +33,8 @@ export default function AboutUs({data}) {
                         className='zup absolute left-0 -top-5 bg-white max-[600px]:w-5 max-[600px]:-top-1' />
                     </div>
 
-                    <p className='text-original text-base italic mx-12 font-avenirmedium max-[600px]:mx-7 max-[600px]:text-xs'>
-                        {t("aboutusinfo")}
-                    </p>
-                    <p className='text-original text-base italic mx-12 mt-5 font-avenirmedium max-[600px]:mx-7 max-[600px]:text-xs'>
-                        Plutarch von Charona
-                    </p>
+                    <p className='text-original text-base italic mx-12 font-avenirmedium max-[600px]:mx-7 max-[600px]:text-xs' 
+                    dangerouslySetInnerHTML={{__html: aboutUsData.attributes?.quote}} />
                     
                     <div className='relative mt-7 max-[600px]:mt-2'>
                         <hr className='bg-original h-0.5' />
@@ -48,15 +44,8 @@ export default function AboutUs({data}) {
                 </div>
 
                 <div className='text-lg font-avenirmedium mb-10 text-textcolor'>
-                    <p className='mb-10 max-[600px]:mb-2'>
-                        <strong>Wine&Co</strong> {t("aboutus1")}
-                    </p>
-
-                    <p className='mb-10 max-[600px]:mb-2'>
-                        {t("aboutus2")}
-                    </p>
-
-                    <p className='mb-10 font-bold max-[600px]:mb-2'>{t("aboutus3")}</p>
+                    <p className='mb-10 max-[600px]:mb-2' 
+                    dangerouslySetInnerHTML={{__html: aboutUsData.attributes?.content}} />
                 </div>
 
                 {/* <CustomButton title={t("READ MORE")} link='/about' /> */}

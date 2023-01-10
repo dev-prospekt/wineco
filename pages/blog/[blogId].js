@@ -3,22 +3,30 @@ import Link from 'next/link';
 import Image from 'next/image'
 import CustomButton from '../../components/customButton';
 import { useEffect } from 'react';
-import { useTranslation } from 'next-i18next'
+import { i18n, useTranslation } from 'next-i18next'
 import Footer from '../../components/footer';
 import BlogItem from '../../components/blogItem';
+import Datee from '../../components/date'
+import RelatedProducts from '../../components/relatedProducts';
 
 export const getStaticProps = async ({ params }) => {
-    const blogListsList = blogLists.filter((p) => p.id.toString() === params.blogId);
+    const data = await fetch(`http://localhost:1337/api/blogs/${params.blogId}?locale=${i18n.language}&populate=*`)
+    .then(response => response.json())
+    .then(json => json.data);
 
     return {
         props: {
-            blog: blogListsList[0],
+            blog: data,
         },
     };
 };
 
 export const getStaticPaths = async ({locales}) => {
-    const paths = blogLists.map((blog) => locales.map((locale) => ({
+    const blogs = await fetch(`http://localhost:1337/api/blogs`)
+    .then(response => response.json())
+    .then(json => json.data);
+
+    const paths = blogs.map((blog) => locales.map((locale) => ({
         params: { blogId: blog.id.toString() },
         locale
     }))).flat()
@@ -35,8 +43,6 @@ export default ({ blog }) => {
         document.body.classList.add("blog-single-page");
     });
 
-    const { t } = useTranslation('common')
-
     return (
         <>
         <div className="about-page max-w-7xl m-auto mb-20">
@@ -49,19 +55,20 @@ export default ({ blog }) => {
 
                 <div className='content max-w-6xl mx-auto bg-white shadow-original-shadow 
                 overflow-hidden rounded-xl mt-40'>
-                    <img src={blog.image} className='w-full h-475 object-cover max-[600px]:h-52' />
+                    <img src={`http://localhost:1337${blog.attributes?.image.data.attributes.url}`} 
+                    className='w-full h-475 object-cover max-[600px]:h-52' />
 
                     <div className='text-lg font-avenirmedium p-20 max-[600px]:p-5'>
                         <h1 className='font-butlerregular text-5xl text-original mb-5'>
-                        {blog.name}
+                        {blog.attributes?.title}
                         </h1>
 
                         <span className='text-original text-base font-bold flex items-center'>
                             <Image src='/images/date-icon.svg' width={15} height={15} alt='date icon' className='mr-2' />
-                            { blog.date }
+                            <Datee dateString={blog.attributes?.createdAt} />
                         </span>
 
-                        <p className='mt-5' dangerouslySetInnerHTML={{ __html: blog.desc }} />
+                        <div className='mt-5' dangerouslySetInnerHTML={{__html: blog.attributes?.content }} />
                     </div>
                 </div>
 
@@ -71,13 +78,7 @@ export default ({ blog }) => {
                     MOGLO BI VAS ZANIMATI
                     </p>
                     
-                    <div className='flex gap-6 mb-10 max-[600px]:flex-wrap max-[600px]:justify-center mt-10'>
-                    { blogLists.slice(-3).map((item, key) => (
-                        <div key={key} className='bg-white overflow-hidden rounded-lg max-w-17rem shadow-original-shadow'>
-                            <BlogItem blog={item} />
-                        </div>
-                    )).reverse() }
-                    </div>
+                    <RelatedProducts />
 
                 </div>
 
