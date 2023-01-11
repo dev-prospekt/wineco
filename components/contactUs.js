@@ -13,7 +13,7 @@ export default function ContactUs() {
     }, [i18n.language])
 
     const fetchPost = async () => {
-        await fetch(`http://localhost:1337/api/contact-us?locale=${i18n.language}&populate=*`)
+        await fetch(`http://strapi.wine-co.hr/api/contact-us?locale=${i18n.language}&populate=*`)
         .then(response => response.json())
         .then(json => {
             setData(json.data)

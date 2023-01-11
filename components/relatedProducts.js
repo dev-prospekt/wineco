@@ -10,7 +10,7 @@ export default function RelatedProducts() {
     }, [])
 
     const fetchPost = async () => {
-        await fetch(`http://localhost:1337/api/blogs?locale=en&populate=*`)
+        await fetch(`http://strapi.wine-co.hr/api/blogs?locale=en&populate=*`)
         .then(response => response.json())
         .then(json => {
             setData(json.data)

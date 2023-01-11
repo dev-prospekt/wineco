@@ -10,7 +10,7 @@ import Datee from '../../components/date'
 import RelatedProducts from '../../components/relatedProducts';
 
 export const getStaticPaths = async ({locales}) => {
-    const blogs = await fetch(`http://localhost:1337/api/blogs`)
+    const blogs = await fetch(`http://strapi.wine-co.hr/api/blogs`)
     .then(response => response.json())
     .then(json => json.data);
 
@@ -26,7 +26,7 @@ export const getStaticPaths = async ({locales}) => {
 };
 
 export const getStaticProps = async ({ params, locale }) => {
-    const data = await fetch(`http://localhost:1337/api/blogs/${params.blogId}?locale=${locale}&populate=*`)
+    const data = await fetch(`http://strapi.wine-co.hr/api/blogs/${params.blogId}?locale=${locale}&populate=*`)
     .then(response => response.json())
     .then(json => json.data);
 
@@ -57,7 +57,7 @@ export default ({ blog }) => {
 
                 <div className='content max-w-6xl mx-auto bg-white shadow-original-shadow 
                 overflow-hidden rounded-xl mt-40'>
-                    <img src={`http://localhost:1337${blog.attributes?.image.data.attributes.url}`} 
+                    <img src={`http://strapi.wine-co.hr${blog.attributes?.image.data.attributes.url}`} 
                     className='w-full h-475 object-cover max-[600px]:h-52' />
 
                     <div className='text-lg font-avenirmedium p-20 max-[600px]:p-5'>
