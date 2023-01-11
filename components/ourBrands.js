@@ -35,11 +35,11 @@ export default function OurBrands() {
                 </div>
 
                 <h1 className='font-butlerregular text-5xl text-original mb-7 max-[600px]:text-3xl uppercase'>
-                    { data.attributes?.title }
+                    { data?.attributes?.title }
                 </h1>
 
                 <div className='text-lg font-avenirmedium text-center'>
-                    <p className='mb-3 text-textcolor' dangerouslySetInnerHTML={{__html: data.attributes?.content}} />
+                    <p className='mb-3 text-textcolor' dangerouslySetInnerHTML={{__html: data?.attributes?.content}} />
                 </div>
 
                 <div className='relative w-1/4'>

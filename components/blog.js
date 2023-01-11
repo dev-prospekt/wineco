@@ -26,7 +26,7 @@ export default function Blog() {
     return (
         <div className="blog grid h-full">
 
-            <div className="flex flex-col justify-center items-center relative mt-40 max-[600px]:mt-32 max-[400px]:mt-16">
+            <div className="flex flex-col justify-center items-center relative mt-0 max-[600px]:mt-32 max-[400px]:mt-16">
                 <div className="absolute bottom-4 -left-48 -z-1">
                     <Image src="/images/bomb1.svg" alt="image" width={500} height={500} />
                 </div>

@@ -38,14 +38,10 @@ export default function Home({props}) {
   };
 
   useEffect(() => {
-    $('a#navLink').on('click', function() {
-      toSlide($(this).attr('data-key'))
-    })
-
     if(pid){
       toSlide(pid)
     }
-  })
+  }, [router])
 
   return (
     <>

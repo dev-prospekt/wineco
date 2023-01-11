@@ -3,23 +3,11 @@ import Link from 'next/link';
 import Image from 'next/image'
 import CustomButton from '../../components/customButton';
 import { useEffect } from 'react';
-import { i18n, useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 import Footer from '../../components/footer';
 import BlogItem from '../../components/blogItem';
 import Datee from '../../components/date'
 import RelatedProducts from '../../components/relatedProducts';
-
-export const getStaticProps = async ({ params }) => {
-    const data = await fetch(`http://localhost:1337/api/blogs/${params.blogId}?locale=${i18n.language}&populate=*`)
-    .then(response => response.json())
-    .then(json => json.data);
-
-    return {
-        props: {
-            blog: data,
-        },
-    };
-};
 
 export const getStaticPaths = async ({locales}) => {
     const blogs = await fetch(`http://localhost:1337/api/blogs`)
@@ -31,13 +19,27 @@ export const getStaticPaths = async ({locales}) => {
         locale
     }))).flat()
 
-    return { 
-        paths,
-        fallback: false 
+    return {
+        paths: paths,
+        fallback: true,
+    };
+};
+
+export const getStaticProps = async ({ params, locale }) => {
+    const data = await fetch(`http://localhost:1337/api/blogs/${params.blogId}?locale=${locale}&populate=*`)
+    .then(response => response.json())
+    .then(json => json.data);
+
+    return {
+        props: {
+            blog: data,
+        },
     };
 };
 
 export default ({ blog }) => {
+    const { t } = useTranslation('common')
+
     useEffect(() => {
         document.body.classList = '';
         document.body.classList.add("blog-single-page");
@@ -59,7 +61,7 @@ export default ({ blog }) => {
                     className='w-full h-475 object-cover max-[600px]:h-52' />
 
                     <div className='text-lg font-avenirmedium p-20 max-[600px]:p-5'>
-                        <h1 className='font-butlerregular text-5xl text-original mb-5'>
+                        <h1 className='font-butlerregular text-5xl text-original mb-5 uppercase'>
                         {blog.attributes?.title}
                         </h1>
 
@@ -68,14 +70,14 @@ export default ({ blog }) => {
                             <Datee dateString={blog.attributes?.createdAt} />
                         </span>
 
-                        <div className='mt-5' dangerouslySetInnerHTML={{__html: blog.attributes?.content }} />
+                        <div className='mt-5 font-butlerregular' dangerouslySetInnerHTML={{__html: blog.attributes?.content }} />
                     </div>
                 </div>
 
                 <div className='max-w-6xl mx-auto mt-24'>
 
                     <p className='font-butlerregular text-5xl text-original mb-5 text-center'>
-                    MOGLO BI VAS ZANIMATI
+                        MOGLO BI VAS ZANIMATI
                     </p>
                     
                     <RelatedProducts />

@@ -2,16 +2,29 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Head from 'next/head'
 import { useEffect, useState } from 'react';
+import { i18n, useTranslation } from 'next-i18next'
 import CustomButton from '../components/customButton'
 import { blogLists } from '../json/data';
 import Footer from '../components/footer';
 import BlogItem from '../components/blogItem';
 
 export default function Blogs() {
-    useEffect(() => {        
+    const [data, setData] = useState([])
+    
+    useEffect(() => {
         document.body.classList = '';
         document.body.classList.add("blogs-page");
-    });
+
+        fetchPost()
+    }, [i18n.language])
+
+    const fetchPost = async () => {
+        await fetch(`http://localhost:1337/api/blogs?locale=${i18n.language}&populate=*`)
+        .then(response => response.json())
+        .then(json => {
+            setData(json.data)
+        })
+    }
 
     return (
         <>
@@ -32,7 +45,7 @@ export default function Blogs() {
                 <div className='grid grid-cols-3 gap-6 mb-10 max-[600px]:grid-cols-1'>
 
                 {
-                blogLists.map((blog, key) => (
+                data.map((blog, key) => (
                     <div key={key} className='bg-white overflow-hidden rounded-lg max-w-17rem shadow-original-shadow'>
                         <BlogItem blog={blog} />
                     </div>

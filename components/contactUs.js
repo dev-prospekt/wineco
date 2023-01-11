@@ -1,27 +1,46 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useTranslation } from 'next-i18next'
+import { i18n, useTranslation } from 'next-i18next'
+import React, { useState, useEffect } from "react";
 
 export default function ContactUs() {
     const { t } = useTranslation('contact')
+
+    const [data, setData] = useState([])
+    
+    useEffect(() => {
+        fetchPost()
+    }, [i18n.language])
+
+    const fetchPost = async () => {
+        await fetch(`http://localhost:1337/api/contact-us?locale=${i18n.language}&populate=*`)
+        .then(response => response.json())
+        .then(json => {
+            setData(json.data)
+        })
+    }
 
     return (
         <div className="contactus grid grid-cols-2 h-full">
 
             <div className="flex flex-col justify-center items-start relative mr-36 mt-40 max-[600px]:mt-32">
-                <h1 className='font-butlerregular text-5xl text-original mb-10 max-[600px]:text-3xl'>{t("title")}</h1>
+                <h1 className='font-butlerregular text-5xl text-original mb-10 max-[600px]:text-3xl uppercase'>
+                    { data.attributes?.title }
+                </h1>
 
                 <div className='text-lg font-avenirmedium'>
                     <div className='mb-10'>
-                        <p className='text-original font-butlerregular text-3xl font-extrabold mb-3 max-[600px]:text-xl'>Wine&Co d.o.o.</p>
-                        <p className='text-textcolor'>Milutina Barača 5,</p>
-                        <p className='text-textcolor'>51000 Rijeka, Croatia</p>
+                        <p className='text-original font-butlerregular text-3xl font-extrabold mb-3 max-[600px]:text-xl'>
+                        { data.attributes?.subtitle1 }
+                        </p>
+                        <p className='text-textcolor' dangerouslySetInnerHTML={{__html: data.attributes?.address }} />
                     </div>
 
                     <div className='mb-10'>
-                        <p className='text-original font-butlerregular text-3xl font-extrabold mb-3 max-[600px]:text-xl'>{t("Contact")}</p>
-                        <p className='text-textcolor'>{t("Phone")}: <span className='text-original'><a href="tel:+3850993119497">+385 (0) 99 311 9497</a></span></p>
-                        <p className='text-textcolor'>Email: <span className='text-original'><a href="mailto:info@wine-co.hr">info@wine-co.hr</a></span></p>
+                        <p className='text-original font-butlerregular text-3xl font-extrabold mb-3 max-[600px]:text-xl'>
+                        { data.attributes?.subtitle2 }
+                        </p>
+                        <p className='text-textcolor' dangerouslySetInnerHTML={{__html: data.attributes?.info }} />
                     </div>
 
                     <div className=''>

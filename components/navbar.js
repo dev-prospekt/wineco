@@ -3,10 +3,10 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import LanguageSwitcher from './LanguageSwitcher';
 import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next'
+import { i18n, useTranslation } from 'next-i18next'
+import FullScreenMenu from './FullScreenMenu';
 
 export default function Navbar() {
-
   const [open, setOpen] = useState(false)
 
   const openHambClick = (event) => {
@@ -45,61 +45,5 @@ export default function Navbar() {
       </div>
 
     </div>
-  )
-}
-
-
-function FullScreenMenu({open, setOpen}) {
-  const router = useRouter();
-  const { t } = useTranslation('common')
-
-  const openHambClick = (event) => {
-    event.preventDefault();
-
-    setOpen(!open)
-
-    if(document.body.classList.value != ''){
-      router.push({
-        pathname: '/',
-        query: { pid: event.target.getAttribute("data-key") },
-      });
-    }
-  };
-  
-  return (
-      <div className={`fullscreenmenu absolute top-0 left-0 h-screen w-screen transform ${open ? "-translate-y-0" : "-translate-y-full"} 
-      transition-transform duration-500 ease-in-out filter`}>
-         
-          <div className="navigat flex flex-col justify-center items-center mt-48 max-[400px]:mt-36">
-            <Link href='' id="navLink" data-key="0" onClick={openHambClick}
-            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
-              {t("homepagenav")}
-            </Link>
-            <Link href='' id="navLink" data-key="1" onClick={openHambClick}
-            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
-              {t("aboutusnav")}
-            </Link>
-            <Link href='' id="navLink" data-key="2" onClick={openHambClick}
-            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
-              {t("winelistnav")}
-            </Link>
-            <Link href='' id="navLink" data-key="3" onClick={openHambClick}
-            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
-              {t("wineshopnav")}
-            </Link>
-            <Link href='' id="navLink" data-key="4" onClick={openHambClick}
-            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
-              {t("ourbrandsnav")}
-            </Link>
-            <Link href='' id="navLink" data-key="5" onClick={openHambClick}
-            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
-              {t("blognav")}
-            </Link>
-            <Link href='' id="navLink" data-key="6" onClick={openHambClick}
-            className="font-butlerregular text-white text-4xl my-4 border border-transparent p-3 hover:border-white max-[400px]:my-2">
-              {t("contactusnav")}
-            </Link>
-          </div>  
-      </div>
   )
 }
