@@ -9,7 +9,7 @@ export default function FullScreenMenu({open, setOpen}){
         
     useEffect(() => {
         fecthNavigation()
-    }, [i18n.language])
+    }, [i18n?.language])
 
     const fecthNavigation = async () => {
         await fetch(`http://strapi.wine-co.hr/api/navigation/render/1?locale=${i18n.language}`)
