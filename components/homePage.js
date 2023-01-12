@@ -9,7 +9,7 @@ const HomePage = () => {
     }, [])
 
     const fetchPost = async () => {
-        fetch('https://www.wine-co.hr/api/home')
+        fetch('http://strapi.wine-co.hr/api/homepage?populate=*')
         .then((res) => res.json())
         .then((data) => {
             console.log(data)
