@@ -9,7 +9,7 @@ const HomePage = () => {
     }, [])
 
     const fetchPost = async () => {
-        fetch('https://wine-co.hr/api/home')
+        fetch('https://www.wine-co.hr/api/home')
         .then((res) => res.json())
         .then((data) => {
             setHomePageData(data.data.attributes)
