@@ -12,6 +12,7 @@ const HomePage = () => {
         fetch('http://strapi.wine-co.hr/api/homepage?populate=*')
         .then((res) => res.json())
         .then((data) => {
+            console.log(data)
             setHomePageData(data.data.attributes)
         });
     }
