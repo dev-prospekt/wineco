@@ -16,10 +16,10 @@ export default function Blogs() {
         document.body.classList.add("blogs-page");
 
         fetchPost()
-    }, [i18n?.language])
+    }, [i18n.language])
 
     const fetchPost = async () => {
-        await fetch(`http://strapi.wine-co.hr/api/blogs?locale=${i18n.language}&populate=*`)
+        await fetch(`http://localhost:3000/api/blogs?lang=${i18n.language}`)
         .then(response => response.json())
         .then(json => {
             setData(json.data)

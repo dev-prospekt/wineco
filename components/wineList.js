@@ -12,7 +12,7 @@ export default function WineList() {
     }, [i18n.language])
 
     const fetchPost = async () => {
-        await fetch(`http://strapi.wine-co.hr/api/wine-list?locale=${i18n.language}`)
+        await fetch(`http://localhost:3000/api/winelist?lang=${i18n.language}`)
         .then(response => response.json())
         .then(json => {
             setData(json.data)

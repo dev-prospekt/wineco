@@ -12,10 +12,10 @@ export default function FullScreenMenu({open, setOpen}){
     }, [i18n?.language])
 
     const fecthNavigation = async () => {
-        await fetch(`http://strapi.wine-co.hr/api/navigation/render/1?locale=${i18n.language}`)
+        await fetch(`http://localhost:3000/api/menu?lang=${i18n.language}`)
         .then(response => response.json())
         .then(json => {
-            setData(json)
+            setData(json.data.attributes.Link)
         })
     }
 
