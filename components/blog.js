@@ -16,7 +16,7 @@ export default function Blog() {
     }, [i18n.language])
 
     const fetchPost = async () => {
-        await fetch(`http://localhost:3000/api/blog?lang=${i18n.language}`)
+        await fetch(`https://www.wine-co.hr/api/blog?lang=${i18n.language}`)
         .then(response => response.json())
         .then(json => {
             setData(json.data)
