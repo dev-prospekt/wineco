@@ -10,7 +10,7 @@ const HomePage = () => {
     }, [])
 
     const fetchPost = async () => {
-        fetch(`http://localhost:3000/api/home?lang=${i18n.language}`)
+        fetch(`https://www.wine-co.hr/api/home?lang=${i18n.language}`)
         .then((res) => res.json())
         .then((data) => {
             console.log(data)
