@@ -12,7 +12,7 @@ export default function WineShop() {
     }, [i18n.language])
 
     const fetchPost = async () => {
-        await fetch(`http://strapi.wine-co.hr/api/wine-shop?locale=${i18n.language}`)
+        await fetch(`http://localhost:3000/api/wineshop?lang=${i18n.language}`)
         .then(response => response.json())
         .then(json => {
             setData(json.data)

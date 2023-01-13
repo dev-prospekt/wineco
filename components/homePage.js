@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import { i18n, useTranslation } from 'next-i18next'
 
 const HomePage = () => {
     const [homePageData, setHomePageData] = useState([])
@@ -9,7 +10,7 @@ const HomePage = () => {
     }, [])
 
     const fetchPost = async () => {
-        fetch('http://strapi.wine-co.hr/api/homepage?populate=*')
+        fetch(`http://localhost:3000/api/home?lang=${i18n.language}`)
         .then((res) => res.json())
         .then((data) => {
             setHomePageData(data.data.attributes)
