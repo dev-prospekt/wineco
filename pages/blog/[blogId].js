@@ -26,7 +26,7 @@ export const getStaticPaths = async ({locales}) => {
 };
 
 export const getStaticProps = async ({ params, locale }) => {
-    const data = await fetch(`http://strapi.wine-co.hr/api/blogs/${params.blogId}?locale=${locale}&populate=*`)
+    const data = await fetch(`https://strapi.wine-co.hr/api/blogs/${params.blogId}?locale=${locale}&populate=*`)
     .then(response => response.json())
     .then(json => json.data);
 
