@@ -34,7 +34,7 @@ export default function WineList() {
                 </div>
             </div>
 
-            <div className="flex flex-col justify-center items-start relative mr-36 mt-40">
+            <div className="flex flex-col justify-center items-start relative mr-36 mt-40 max-[600px]:mt-32">
                 <h1 className='font-butlerregular text-5xl text-original mb-7 max-[600px]:text-3xl uppercase'>
                     { data.attributes?.title }
                 </h1>

@@ -25,7 +25,7 @@ export default function OurBrands() {
 
         <div className="ourbrands grid h-full">
 
-            <div className="flex flex-col justify-start items-center relative mt-40 max-[600px]:justify-start">
+            <div className="flex flex-col justify-start items-center relative mt-40 max-[600px]:justify-start max-[600px]:mt-32">
                 <div className="absolute bottom-4 -left-48 max-[600px]:-z-1">
                     <Image src="/images/bomb1.svg" alt="image" width={500} height={500} />
                 </div>
@@ -42,7 +42,7 @@ export default function OurBrands() {
                     <p className='mb-3 text-textcolor' dangerouslySetInnerHTML={{__html: data?.attributes?.content}} />
                 </div>
 
-                <div className='relative w-1/4'>
+                <div className='relative w-1/4 max-[600px]:w-3/4'>
                     <img src="/country/croatian.svg" useMap="#image-map" id="mapa" alt='map' />
                     <map name="image-map">
                         <area target="" className='cursor-pointer' alt="France" title="france" coords="-1,55,104,1,194,42,194,175,66,195" shape="poly" />
