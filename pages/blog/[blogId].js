@@ -10,7 +10,7 @@ import Datee from '../../components/date'
 import RelatedProducts from '../../components/relatedProducts';
 
 export const getStaticPaths = async ({locales}) => {
-    const blogs = await fetch(`http://strapi.wine-co.hr/api/blogs`)
+    const blogs = await fetch(`https://strapi.wine-co.hr/api/blogs`)
     .then(response => response.json())
     .then(json => json.data);
 
