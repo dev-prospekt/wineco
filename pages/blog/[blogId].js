@@ -4,6 +4,7 @@ import Footer from '../../components/footer';
 import Datee from '../../components/date'
 import RelatedProducts from '../../components/relatedProducts';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export const getStaticPaths = async ({locales}) => {
     const blogs = await fetch(`https://strapi.wine-co.hr/api/blogs`)
@@ -28,6 +29,9 @@ export const getStaticProps = async ({ params, locale }) => {
 
     return {
         props: {
+            ...(await serverSideTranslations(locale, [
+                'common',
+            ])),
             blog: data,
         },
     };
