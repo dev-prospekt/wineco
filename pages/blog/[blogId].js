@@ -71,11 +71,9 @@ export default ({blog}) => {
                             <Swiper
                             spaceBetween={50}
                             slidesPerView={1}
-                            observer
-                            observeParents
                             className='h-1/3'
                             >
-                                { blog.attributes.gallery.data && blog.attributes.gallery.data.map((slideimg, key) => {
+                                { blog.attributes?.gallery.data && blog.attributes?.gallery.data.map((slideimg, key) => {
                                     return (
                                         <SwiperSlide key={key} className='max-[600px]:!w-full'>
                                             <img src={`http://strapi.wine-co.hr${slideimg.attributes.url}`}
