@@ -5,7 +5,7 @@ import Datee from './date'
 export default function BlogItem({blog}) {
   return (
     <Link href={`/blog/${blog.id}`}>
-        <img src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${blog.attributes?.image.data.attributes.url}`} 
+        <img src={`https://strapi.wine-co.hr${blog.attributes?.image.data.attributes.url}`} 
         width={360} height={270} alt='blog' className='h-32 object-cover' />
 
         <div className='p-5'>
