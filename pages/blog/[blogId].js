@@ -51,7 +51,7 @@ export default ({ blog }) => {
 
             <div className="flex flex-col justify-center items-start relative">
 
-                <div className="absolute -left-48 top-96">
+                <div className="fixed -left-10 top-96">
                     <Image src="/images/bomb1.svg" alt="image" width={500} height={500} />
                 </div>
 

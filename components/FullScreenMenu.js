@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router';
-import { i18n, useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 import Link from 'next/link';
 
 export default function FullScreenMenu({open, setOpen}){
     const router = useRouter();
     const [data, setData] = useState([])
+    const { i18n, t } = useTranslation('common')
         
     useEffect(() => {
         fecthNavigation()
-    }, [i18n?.language])
+    }, [i18n.language])
 
     const fecthNavigation = async () => {
         await fetch(`/api/menu?lang=${i18n.language}`)

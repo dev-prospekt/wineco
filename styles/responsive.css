@@ -20,13 +20,24 @@
         grid-template-columns: auto;
     }
 
+    .homepage p {
+        font-size: 25px;
+    }
+
     .homepage > div:first-child {
         align-items: flex-start;
         padding-top: 60%;
     }
 
     .homepage > div:first-child > div:last-child {
-        top: 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 20px;
+        height: fit-content;
+        position: absolute;
+        bottom: 40%;
+        top: auto;
     }
     .homepage > div:first-child > div:last-child img {
         width: 60px;

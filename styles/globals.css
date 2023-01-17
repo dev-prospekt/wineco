@@ -60,6 +60,7 @@ a {
 .swiper {
   overflow: unset !important;
   padding: initial;
+  height: 100vh;
 }
 .swiper-slide {
   height: 100vh !important;
@@ -68,10 +69,11 @@ a {
 .swiper-slide-active {
   opacity: 1 !important;
 }
+
 .swiper-pagination {
-  top: 25rem !important;
-  right: 0 !important;
-  transform: translate(-50%, -50%) !important;
+  right: 10px !important;
+  top: 50% !important;
+  transform: translate3d(0,-50%,0) !important;
 }
 
 .swiper-pagination span {
