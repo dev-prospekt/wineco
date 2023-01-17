@@ -39,6 +39,7 @@ export default function Home({props}) {
 
   useEffect(() => {
     if(pid){
+      document.body.className = "";
       toSlide(pid)
     }
   }, [router])
