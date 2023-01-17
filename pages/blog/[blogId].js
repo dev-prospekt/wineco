@@ -51,7 +51,7 @@ export default ({ blog }) => {
 
             <div className="flex flex-col justify-center items-start relative">
 
-                <div className="fixed -left-10 top-96">
+                <div className="fixed -left-10 top-96 max-[600px]:w-36">
                     <Image src="/images/bomb1.svg" alt="image" width={500} height={500} />
                 </div>
 
@@ -61,7 +61,7 @@ export default ({ blog }) => {
                     className='w-full h-475 object-cover max-[600px]:h-52' />
 
                     <div className='text-lg font-avenirmedium p-20 max-[600px]:p-5'>
-                        <h1 className='font-butlerregular text-5xl text-original mb-5 uppercase'>
+                        <h1 className='font-butlerregular text-5xl text-original mb-5 uppercase max-[600px]:text-xl'>
                         {blog.attributes?.title}
                         </h1>
 
@@ -70,13 +70,13 @@ export default ({ blog }) => {
                             <Datee dateString={blog.attributes?.createdAt} />
                         </span>
 
-                        <div className='mt-5 font-butlerregular' dangerouslySetInnerHTML={{__html: blog.attributes?.content }} />
+                        <div className='mt-5 font-butlerregular max-[600px]:text-lg' dangerouslySetInnerHTML={{__html: blog.attributes?.content }} />
                     </div>
                 </div>
 
                 <div className='max-w-6xl mx-auto mt-24'>
 
-                    <p className='font-butlerregular text-5xl text-original mb-5 text-center'>
+                    <p className='font-butlerregular text-5xl text-original mb-5 text-center max-[600px]:text-xl'>
                         MOGLO BI VAS ZANIMATI
                     </p>
                     
