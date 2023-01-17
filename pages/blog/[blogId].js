@@ -8,6 +8,7 @@ import Footer from '../../components/footer';
 import BlogItem from '../../components/blogItem';
 import Datee from '../../components/date'
 import RelatedProducts from '../../components/relatedProducts';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 export const getStaticPaths = async ({locales}) => {
     const blogs = await fetch(`https://strapi.wine-co.hr/api/blogs`)
@@ -41,6 +42,8 @@ export default ({blog}) => {
     useEffect(() => {
         document.body.classList = '';
         document.body.classList.add("blog-single-page");
+
+        console.log(blog.attributes.gallery)
     });
 
     return (
@@ -70,6 +73,23 @@ export default ({blog}) => {
 
                         <div className='mt-5 font-butlerregular text-textcolor max-[600px]:text-lg' 
                         dangerouslySetInnerHTML={{__html: blog.attributes?.content }} />
+
+                        <div className='mt-4 w-full'>
+                        <Swiper
+                        spaceBetween={50}
+                        slidesPerView={1}
+                        className='h-1/3'
+                        >
+                            { blog.attributes.gallery.data.map((slideimg, key) => {
+                                return (
+                                    <SwiperSlide key={key} className='max-[600px]:!w-full'>
+                                        <img src={`http://strapi.wine-co.hr${slideimg.attributes.url}`}
+                                        className='w-1/3 mx-auto max-[600px]:w-full' />
+                                    </SwiperSlide>
+                                )
+                            }) }
+                        </Swiper>
+                        </div>
                     </div>
                 </div>
 
