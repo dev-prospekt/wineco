@@ -13,7 +13,7 @@ $(function() {
             if($(this).attr('data-title') != title){
                 $(this).hide();
             } else {
-                $(this).css('display', 'flex');
+                $(this).css('display', 'grid');
             }
         });
     });

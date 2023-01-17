@@ -41,7 +41,7 @@ export default function FullScreenMenu({open, setOpen}){
                 data.map(( menu, key ) => (
                     <Link href='' key={key} id="navLink" data-key={menu.data_key} onClick={openHambClick}
                     className="font-butlerregular text-white text-4xl my-4 
-                    border border-transparent p-3 hover:border-white max-[400px]:my-2 uppercase">
+                    border border-transparent p-3 pt-4 hover:border-white max-[400px]:my-2 uppercase">
                         { menu.title }
                     </Link>
                 ))

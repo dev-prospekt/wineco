@@ -23,13 +23,14 @@ export default function WineList() {
         <div className="winelist grid grid-cols-2 h-full">
 
             <div className="relative">
-                <img src='/images/winelistbg.svg' alt="winelistbg" className='w-full h-screen' />
+                <img src='/images/winelistbg.svg' alt="winelistbg" 
+                className='w-full h-screen' />
 
                 <div className="absolute top-28 right-24 bomb">
                     <Image src="/images/bomb.svg" alt="image" width={300} height={300} />
                 </div>
 
-                <div className="absolute bottom-4 -left-48">
+                <div className="absolute bottom-4 -left-48 max-[600px]:w-1/2 max-[600px]:-left-20">
                     <Image src="/images/bomb1.svg" alt="image" width={500} height={500} />
                 </div>
             </div>

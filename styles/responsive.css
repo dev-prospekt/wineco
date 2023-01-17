@@ -81,12 +81,12 @@
         bottom: 0px;
         z-index: -1;
     }
-    .aboutus > div:last-child > img {
+    /* .aboutus > div:last-child > img {
         width: 50%;
         height: 100%;
         opacity: 0.3;
         display: inline;
-    }
+    } */
     .aboutus > div:last-child > div > img {
         width: 70%;
     }
@@ -108,7 +108,7 @@
         right: 0px;
     }
     .winelist > div:first-child > img {
-        width: 40%;
+        width: 30%;
         height: 100%;
         display: inline;
     }
@@ -129,7 +129,7 @@
     .wineshop > div:last-child {
         position: absolute;
         bottom: 0px;
-        width: 40%;
+        width: 25%;
         right: 25px;
         z-index: -1;
     }

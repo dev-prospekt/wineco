@@ -6,7 +6,7 @@ export default function BlogItem({blog}) {
   return (
     <Link href={`/blog/${blog.id}`}>
         <img src={`https://strapi.wine-co.hr${blog.attributes?.image.data.attributes.url}`} 
-        width={360} height={270} alt='blog' className='h-32 object-cover' />
+        width={360} height={270} alt='blog' className='h-48 object-cover' />
 
         <div className='p-5'>
             <p className='font-extrabold text-lg text-original font-butlerregular tracking-widest mb-4

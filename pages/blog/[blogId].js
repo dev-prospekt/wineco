@@ -68,7 +68,8 @@ export default ({blog}) => {
                             <Datee dateString={blog.attributes?.createdAt} />
                         </span>
 
-                        <div className='mt-5 font-butlerregular max-[600px]:text-lg' dangerouslySetInnerHTML={{__html: blog.attributes?.content }} />
+                        <div className='mt-5 font-butlerregular text-textcolor max-[600px]:text-lg' 
+                        dangerouslySetInnerHTML={{__html: blog.attributes?.content }} />
                     </div>
                 </div>
 

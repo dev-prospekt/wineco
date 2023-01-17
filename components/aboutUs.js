@@ -52,7 +52,8 @@ export default function AboutUs({data}) {
             </div>
 
             <div className="relative">
-                <img src='/images/aboutus-bg.svg' alt="aboutus-bg" className='w-full h-screen' />
+                <img src='/images/aboutus-bg.svg' alt="aboutus-bg" 
+                className='w-full h-screen max-[600px]:hidden' />
 
                 <div className="absolute bottom-28 -right-28">
                     <Image src="/images/bomb2.svg" alt="image" width={450} height={450} />
