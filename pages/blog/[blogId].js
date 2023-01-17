@@ -51,7 +51,7 @@ export default ({blog}) => {
 
                 <div className='content max-w-6xl mx-auto bg-white shadow-original-shadow 
                 overflow-hidden rounded-xl mt-40'>
-                    <img src={`http://strapi.wine-co.hr${blog.attributes?.image.data.attributes.url}`} 
+                    <img src={`https://strapi.wine-co.hr${blog.attributes?.image.data.attributes.url}`} 
                     className='w-full h-475 object-cover max-[600px]:h-52' />
 
                     <div className='text-lg font-avenirmedium p-20 max-[600px]:p-5'>
@@ -76,7 +76,7 @@ export default ({blog}) => {
                                 { blog.attributes?.gallery.data && blog.attributes?.gallery.data.map((slideimg, key) => {
                                     return (
                                         <SwiperSlide key={key} className='max-[600px]:!w-full'>
-                                            <img src={`http://strapi.wine-co.hr${slideimg.attributes.url}`}
+                                            <img src={`https://strapi.wine-co.hr${slideimg.attributes.url}`}
                                             className='w-1/3 mx-auto max-[600px]:w-full' />
                                         </SwiperSlide>
                                     )
