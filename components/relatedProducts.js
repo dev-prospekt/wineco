@@ -10,7 +10,8 @@ export default function RelatedProducts() {
     }, [])
 
     const fetchPost = async () => {
-        await fetch(`/api/blogs?lang=${i18n?.language}&populate=*`)
+        const langcc = i18n.language == 'undefined' ? 'en' : i18n.language;
+        await fetch(`/api/blogs?lang=${langcc}&populate=*`)
         .then(response => response.json())
         .then(json => {
             setData(json.data)

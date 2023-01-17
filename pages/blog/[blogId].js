@@ -2,7 +2,7 @@ import { blogLists } from '../../json/data';
 import Link from 'next/link';
 import Image from 'next/image'
 import CustomButton from '../../components/customButton';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'next-i18next'
 import Footer from '../../components/footer';
 import BlogItem from '../../components/blogItem';
@@ -37,9 +37,7 @@ export const getStaticProps = async ({ params, locale }) => {
     };
 };
 
-export default ({ blog }) => {
-    const { t } = useTranslation('common')
-
+export default ({blog}) => {
     useEffect(() => {
         document.body.classList = '';
         document.body.classList.add("blog-single-page");
