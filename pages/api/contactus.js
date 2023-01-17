@@ -3,7 +3,7 @@
 export default async function handler(req, res) {
     try {
         const response = await fetch(
-            `http://strapi.wine-co.hr/api/contact-us?locale=${req.query.lang}&populate=*`,
+            `https://strapi.wine-co.hr/api/contact-us?locale=${req.query.lang}&populate=*`,
             {
                 method: 'GET',
             }
