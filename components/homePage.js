@@ -10,10 +10,9 @@ const HomePage = () => {
     }, [])
 
     const fetchPost = async () => {
-        fetch(`https://www.wine-co.hr/api/home?lang=${i18n.language}`)
+        fetch(`/api/home?lang=${i18n.language}`)
         .then((res) => res.json())
         .then((data) => {
-            console.log(data)
             setHomePageData(data.data.attributes)
         });
     }
@@ -36,7 +35,7 @@ const HomePage = () => {
                 <div className="absolute bottom-10 left-0 flex justify-between w-full">
                     {homePageData.logotip ? homePageData.logotip.data.map((logotip) => {
                         return(
-                            <img key={logotip.id} src={`http://strapi.wine-co.hr${logotip.attributes.url}`} 
+                            <img key={logotip.id} src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${logotip.attributes.url}`} 
                             alt={logotip.attributes.name} width={100} height={100} />
                         );
                     }) : '' }

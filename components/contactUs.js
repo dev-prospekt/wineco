@@ -13,7 +13,7 @@ export default function ContactUs() {
     }, [i18n.language])
 
     const fetchPost = async () => {
-        await fetch(`https://www.wine-co.hr/api/contactus?lang=${i18n.language}`)
+        await fetch(`/api/contactus?lang=${i18n.language}`)
         .then(response => response.json())
         .then(json => {
             setData(json.data)

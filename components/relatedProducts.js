@@ -10,7 +10,7 @@ export default function RelatedProducts() {
     }, [])
 
     const fetchPost = async () => {
-        await fetch(`https://www.wine-co.hr/api/blogs?lang=${i18n?.language}&populate=*`)
+        await fetch(`/api/blogs?lang=${i18n?.language}&populate=*`)
         .then(response => response.json())
         .then(json => {
             setData(json.data)

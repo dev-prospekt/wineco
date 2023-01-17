@@ -12,7 +12,7 @@ export default function WineList() {
     }, [i18n.language])
 
     const fetchPost = async () => {
-        await fetch(`https://www.wine-co.hr/api/winelist?lang=${i18n.language}`)
+        await fetch(`/api/winelist?lang=${i18n.language}`)
         .then(response => response.json())
         .then(json => {
             setData(json.data)

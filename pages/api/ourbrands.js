@@ -1,16 +1,11 @@
+import { fetcher } from "../../lib/api";
 
 
 export default async function handler(req, res) {
     try {
-        const response = await fetch(
-            `https://strapi.wine-co.hr/api/our-brand?locale=${req.query.lang}`,
-            {
-                method: 'GET',
-            }
-        );
-        const data = await response.json();
+        const response = await fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/our-brand?locale=${req.query.lang}`);
         
-        res.status(200).json(data)
+        res.status(200).json(response)
     } catch (err) {
         console.log(err);
     }
