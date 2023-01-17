@@ -1,11 +1,6 @@
-import { blogLists } from '../../json/data';
-import Link from 'next/link';
 import Image from 'next/image'
-import CustomButton from '../../components/customButton';
-import { useState, useEffect } from 'react';
-import { useTranslation } from 'next-i18next'
+import {  useEffect } from 'react';
 import Footer from '../../components/footer';
-import BlogItem from '../../components/blogItem';
 import Datee from '../../components/date'
 import RelatedProducts from '../../components/relatedProducts';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -42,8 +37,6 @@ export default ({blog}) => {
     useEffect(() => {
         document.body.classList = '';
         document.body.classList.add("blog-single-page");
-
-        console.log(blog.attributes.gallery)
     });
 
     return (
@@ -75,20 +68,20 @@ export default ({blog}) => {
                         dangerouslySetInnerHTML={{__html: blog.attributes?.content }} />
 
                         <div className='mt-4 w-full'>
-                        <Swiper
-                        spaceBetween={50}
-                        slidesPerView={1}
-                        className='h-1/3'
-                        >
-                            { blog.attributes.gallery.data.map((slideimg, key) => {
-                                return (
-                                    <SwiperSlide key={key} className='max-[600px]:!w-full'>
-                                        <img src={`http://strapi.wine-co.hr${slideimg.attributes.url}`}
-                                        className='w-1/3 mx-auto max-[600px]:w-full' />
-                                    </SwiperSlide>
-                                )
-                            }) }
-                        </Swiper>
+                            <Swiper
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            className='h-1/3'
+                            >
+                                { blog.attributes.gallery.data && blog.attributes.gallery.data.map((slideimg, key) => {
+                                    return (
+                                        <SwiperSlide key={key} className='max-[600px]:!w-full'>
+                                            <img src={`http://strapi.wine-co.hr${slideimg.attributes.url}`}
+                                            className='w-1/3 mx-auto max-[600px]:w-full' />
+                                        </SwiperSlide>
+                                    )
+                                }) }
+                            </Swiper>
                         </div>
                     </div>
                 </div>
