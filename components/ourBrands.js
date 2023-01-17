@@ -21,7 +21,7 @@ export default function OurBrands() {
 
     return (
         <>
-        <Script src='/js/script.js'></Script>
+        <Script src='/js/script.js' beforeInteractive></Script>
 
         <div className="ourbrands grid h-full">
 
