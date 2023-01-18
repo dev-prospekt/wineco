@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import {  useEffect } from 'react';
+import { useEffect } from 'react';
 import Footer from '../../components/footer';
 import Datee from '../../components/date'
 import RelatedProducts from '../../components/relatedProducts';
@@ -71,7 +71,11 @@ export default ({blog}) => {
                         dangerouslySetInnerHTML={{__html: blog.attributes?.content }} />
 
                         <div className='mt-4 w-full'>
-                            <EmblaCarousel slides={blog.attributes.gallery.data} options={OPTIONS} />
+                            <EmblaCarousel slides={blog.attributes.gallery.data} 
+                            options={{ 
+                                loop: true 
+                            }} 
+                            />
                         </div>
                     </div>
                 </div>
