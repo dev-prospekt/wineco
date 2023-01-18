@@ -57,32 +57,32 @@ a {
   z-index: 10;
 }
 
-body:not(.blog-single-page) .swiper {
+.swiper {
   overflow: unset !important;
   padding: initial;
   height: 100vh;
 }
-body:not(.blog-single-page) .swiper-slide {
+.swiper-slide {
   height: 100vh !important;
   opacity: 0 !important;
 }
-body:not(.blog-single-page) .swiper-slide-active {
+.swiper-slide-active {
   opacity: 1 !important;
 }
 
-body:not(.blog-single-page) .swiper-pagination {
+.swiper-pagination {
   right: 10px !important;
   top: 50% !important;
   transform: translate3d(0,-50%,0) !important;
 }
 
-body:not(.blog-single-page) .swiper-pagination span {
+.swiper-pagination span {
   border:  1px solid #AB8844;
   background-color: transparent !important;
   opacity: 1;
   margin: 10px 0px !important;
 }
-body:not(.blog-single-page) .swiper-pagination span.swiper-pagination-bullet-active {
+.swiper-pagination span.swiper-pagination-bullet-active {
   background-color: #AB8844 !important;
 }
 
@@ -175,4 +175,65 @@ body:not(.blog-single-page) .swiper-pagination span.swiper-pagination-bullet-act
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+
+.embla {
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
+  --slide-height: 19rem;
+  padding: 1.6rem;
+}
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+.embla__slide {
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+  position: relative;
+}
+.embla__slide__img {
+  display: block;
+  height: var(--slide-height);
+  width: 100%;
+  object-fit: cover;
+}
+.embla__slide__number {
+  width: 4.6rem;
+  height: 4.6rem;
+  z-index: 1;
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  border-radius: 50%;
+  background-color: rgba(var(--background-site-rgb-value), 0.85);
+  line-height: 4.6rem;
+  font-weight: 900;
+  text-align: center;
+  pointer-events: none;
+}
+.embla__slide__number > span {
+  color: var(--brand-primary);
+  background-image: linear-gradient(
+    45deg,
+    var(--brand-primary),
+    var(--brand-secondary)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.6rem;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

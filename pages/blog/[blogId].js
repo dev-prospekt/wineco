@@ -3,7 +3,7 @@ import {  useEffect } from 'react';
 import Footer from '../../components/footer';
 import Datee from '../../components/date'
 import RelatedProducts from '../../components/relatedProducts';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import EmblaCarousel from '../../components/EmblaCarousel';
 
 export const getStaticPaths = async ({locales}) => {
     const blogs = await fetch(`https://strapi.wine-co.hr/api/blogs`)
@@ -32,6 +32,9 @@ export const getStaticProps = async ({ params, locale }) => {
         },
     };
 };
+
+const OPTIONS = { loop: true }
+const SLIDE_COUNT = 1
 
 export default ({blog}) => {
     useEffect(() => {
@@ -68,20 +71,7 @@ export default ({blog}) => {
                         dangerouslySetInnerHTML={{__html: blog.attributes?.content }} />
 
                         <div className='mt-4 w-full'>
-                            <Swiper
-                            spaceBetween={50}
-                            slidesPerView={1}
-                            className='h-1/3'
-                            >
-                                { blog.attributes?.gallery.data && blog.attributes?.gallery.data.map((slideimg, key) => {
-                                    return (
-                                        <SwiperSlide key={key} className='max-[600px]:!w-full'>
-                                            <img src={`https://strapi.wine-co.hr${slideimg.attributes.url}`}
-                                            className='w-1/3 mx-auto max-[600px]:w-full' />
-                                        </SwiperSlide>
-                                    )
-                                }) }
-                            </Swiper>
+                            <EmblaCarousel slides={blog.attributes.gallery.data} options={OPTIONS} />
                         </div>
                     </div>
                 </div>
