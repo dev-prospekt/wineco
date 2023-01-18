@@ -69,7 +69,7 @@ export default function OurBrands() {
                 <div id="checkImage" data-title="serbia" 
                 className="hidden w-1/2 grid-cols-4 gap-5 place-items-center 
                 max-[600px]:flex-wrap max-[600px]:gap-4 max-[600px]:w-4/5">
-                    <Image src="/country/tonkovic.svg" alt="image" width={70} height={70} className='cursor-pointer' />
+                    <Image src="/country/tonkovic.png" alt="image" width={70} height={70} className='cursor-pointer' />
                     <Image src="/country/vertiz.svg" alt="image" width={70} height={70} className='cursor-pointer' />
                 </div>
 
