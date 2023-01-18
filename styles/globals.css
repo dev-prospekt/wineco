@@ -49,6 +49,10 @@ a {
   text-decoration: none;
 }
 
+.blog-single-page .header .search {
+  opacity: 0;
+}
+
 .fullscreenmenu {
   background-image: url('/images/menu_bg.svg');
   background-repeat: no-repeat;

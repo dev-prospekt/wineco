@@ -21,6 +21,8 @@ export default function Blog() {
         .then(json => {
             setData(json.data)
         })
+
+        console.log(data)
     }
 
     return (

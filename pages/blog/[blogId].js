@@ -8,28 +8,13 @@ import Head from 'next/head'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-export const getStaticPaths = async ({locales}) => {
-    const blogs = await fetch(`https://strapi.wine-co.hr/api/blogs`)
+export async function getServerSideProps(context) {
+    const {blogId} = context.query
+    const { locale } = context
+
+    const data = await fetch(`https://strapi.wine-co.hr/api/blogs/${blogId}?populate=*`)
     .then(response => response.json())
     .then(json => json.data);
-
-    const paths = blogs.map((blog) => locales.map((locale) => ({
-        params: { blogId: blog.id.toString() },
-        locale
-    }))).flat()
-
-    return {
-        paths: paths,
-        fallback: false,
-    };
-};
-
-export const getStaticProps = async ({ params, locale }) => {
-    const data = await fetch(`https://strapi.wine-co.hr/api/blogs/${params.blogId}?locale=${locale}&populate=*`)
-    .then(response => response.json())
-    .then(json => json.data);
-
-    console.log(locale)
 
     return {
         props: {
@@ -37,7 +22,7 @@ export const getStaticProps = async ({ params, locale }) => {
             ...(await serverSideTranslations(locale, ["common"])),
         },
     };
-};
+}
 
 export default ({blog}) => {
     const { t } = useTranslation('common')
@@ -76,7 +61,7 @@ export default ({blog}) => {
                         </span>
 
                         <div className='mt-5 font-butlerregular text-textcolor max-[600px]:text-lg' 
-                        dangerouslySetInnerHTML={{__html: blog.attributes?.content }} />
+                        dangerouslySetInnerHTML={{__html: blog.attributes.content }} />
 
                         <div className='mt-4 w-full'>
                             <EmblaCarousel slides={blog.attributes.gallery.data} 
