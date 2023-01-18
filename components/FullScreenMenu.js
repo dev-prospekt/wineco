@@ -35,7 +35,7 @@ export default function FullScreenMenu({open, setOpen}){
         <div className={`fullscreenmenu absolute top-0 left-0 h-screen w-screen transform ${open ? "-translate-y-0" : "-translate-y-full"} 
         transition-transform duration-500 ease-in-out filter`}>
             
-            <div className="navigat flex flex-col justify-center items-center mt-48 max-[400px]:mt-36">
+            <div className="navigat flex flex-col justify-center items-center mt-12 h-screen max-[400px]:mt-0">
 
                 { 
                 data.map(( menu, key ) => (
