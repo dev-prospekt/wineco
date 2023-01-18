@@ -4,7 +4,7 @@ import Datee from './date'
 
 export default function BlogItem({blog}) {
   return (
-    <Link href={`/blog/${blog.id}`}>
+    <a href={`/blog/${blog.id}`}>
         <img src={`https://strapi.wine-co.hr${blog.attributes?.image.data.attributes.url}`} 
         width={360} height={270} alt='blog' className='h-48 object-cover' />
 
@@ -22,6 +22,6 @@ export default function BlogItem({blog}) {
                 <Datee dateString={blog.attributes?.createdAt} />
             </span>
         </div>
-    </Link>
+    </a>
   )
 }
