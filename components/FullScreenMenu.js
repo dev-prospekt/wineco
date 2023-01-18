@@ -35,12 +35,12 @@ export default function FullScreenMenu({open, setOpen}){
         <div className={`fullscreenmenu absolute top-0 left-0 h-screen w-screen transform ${open ? "-translate-y-0" : "-translate-y-full"} 
         transition-transform duration-500 ease-in-out filter`}>
             
-            <div className="navigat flex flex-col justify-center items-center mt-12 h-screen max-[400px]:mt-0">
+            <div className={`navigat ${open ? "" : "hidden"} flex flex-col justify-center items-center mt-12 h-screen max-[400px]:mt-0`}>
 
                 { 
                 data.map(( menu, key ) => (
                     <Link href='' key={key} id="navLink" data-key={menu.data_key} onClick={openHambClick}
-                    className="font-butlerregular text-white text-4xl my-4 
+                    className="font-butlerregular text-white text-3xl my-3 
                     border border-transparent p-3 pt-4 hover:border-white max-[400px]:my-2 uppercase">
                         { menu.title }
                     </Link>
