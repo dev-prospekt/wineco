@@ -4,6 +4,9 @@ import Footer from '../../components/footer';
 import Datee from '../../components/date'
 import RelatedProducts from '../../components/relatedProducts';
 import EmblaCarousel from '../../components/EmblaCarousel';
+import Head from 'next/head'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export const getStaticPaths = async ({locales}) => {
     const blogs = await fetch(`https://strapi.wine-co.hr/api/blogs`)
@@ -26,17 +29,19 @@ export const getStaticProps = async ({ params, locale }) => {
     .then(response => response.json())
     .then(json => json.data);
 
+    console.log(locale)
+
     return {
         props: {
             blog: data,
+            ...(await serverSideTranslations(locale, ["common"])),
         },
     };
 };
 
-const OPTIONS = { loop: true }
-const SLIDE_COUNT = 1
-
 export default ({blog}) => {
+    const { t } = useTranslation('common')
+
     useEffect(() => {
         document.body.classList = '';
         document.body.classList.add("blog-single-page");
@@ -44,6 +49,9 @@ export default ({blog}) => {
 
     return (
         <>
+        <Head>
+            <title>Blog - {blog.attributes?.title}</title>
+        </Head>
         <div className="about-page max-w-7xl m-auto mb-20">
 
             <div className="flex flex-col justify-center items-start relative">
@@ -83,7 +91,7 @@ export default ({blog}) => {
                 <div className='max-w-6xl mx-auto mt-24'>
 
                     <p className='font-butlerregular text-5xl text-original mb-5 text-center max-[600px]:text-xl'>
-                        MOGLO BI VAS ZANIMATI
+                        {t('relatedproducts')}
                     </p>
                     
                     <RelatedProducts />
