@@ -10,7 +10,7 @@ const EmblaCarousel = (props) => {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
 
-          {slides.map((index, key) => (
+          {slides && slides.map((index, key) => (
             <div className="embla__slide" key={key}>
               <img
                 className="embla__slide__img"
