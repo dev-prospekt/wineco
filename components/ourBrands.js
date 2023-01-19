@@ -56,7 +56,7 @@ export default function OurBrands() {
                 {/* CROATIA */}
                 <div id="checkImage" data-title="croatian" 
                 className="w-1/2 grid grid-cols-4 gap-5 place-items-center 
-                max-[600px]:flex-wrap max-[600px]:gap-4 max-[600px]:w-4/5">
+                max-[600px]:flex-wrap max-[600px]:gap-4 max-[600px]:w-11/12">
                     <Image src="/country/bastian.svg" alt="image" width={70} height={70} className='cursor-pointer' />
                     <Image src="/country/cuj.svg" alt="image" width={70} height={70} className='cursor-pointer' />
                     <Image src="/country/tomaz.svg" alt="image" width={70} height={70} className='cursor-pointer' />
@@ -68,7 +68,7 @@ export default function OurBrands() {
                 {/* SERBIA */}
                 <div id="checkImage" data-title="serbia" 
                 className="hidden w-1/2 grid-cols-4 gap-5 place-items-center 
-                max-[600px]:flex-wrap max-[600px]:gap-4 max-[600px]:w-4/5">
+                max-[600px]:flex-wrap max-[600px]:gap-4 max-[600px]:w-11/12">
                     <Image src="/country/tonkovic.png" alt="image" width={70} height={70} className='cursor-pointer' />
                     <Image src="/country/vertiz.svg" alt="image" width={70} height={70} className='cursor-pointer' />
                 </div>
@@ -76,7 +76,7 @@ export default function OurBrands() {
                 {/* ITALY */}
                 <div id="checkImage" data-title="italy" 
                 className="hidden w-1/2 grid-cols-4 gap-5 place-items-center 
-                max-[600px]:flex-wrap max-[600px]:gap-4 max-[600px]:w-4/5">
+                max-[600px]:flex-wrap max-[600px]:gap-4 max-[600px]:w-11/12">
                     <Image src="/country/belavista.svg" alt="image" width={70} height={70} className='cursor-pointer' />
                     <Image src="/country/bosco.svg" alt="image" width={70} height={70} className='cursor-pointer' />
                     <Image src="/country/collavini.svg" alt="image" width={70} height={70} className='cursor-pointer' />
@@ -87,14 +87,14 @@ export default function OurBrands() {
                 {/* FRANCE */}
                 <div id="checkImage" data-title="france" 
                 className="hidden w-1/2 grid-cols-4 gap-5 place-items-center 
-                max-[600px]:flex-wrap max-[600px]:gap-4 max-[600px]:w-4/5">
+                max-[600px]:flex-wrap max-[600px]:gap-4 max-[600px]:w-11/12">
                     <Image src="/country/laurent.svg" alt="image" width={70} height={70} className='cursor-pointer' />
                 </div>
 
                 {/* SLOVENIA */}
                 <div id="checkImage" data-title="slovenia" 
                 className="hidden w-1/2 grid-cols-4 gap-5 place-items-center 
-                max-[600px]:flex-wrap max-[600px]:gap-4 max-[600px]:w-4/5">
+                max-[600px]:flex-wrap max-[600px]:gap-4 max-[600px]:w-11/12">
                     <Image src="/country/dolfo.svg" alt="image" width={70} height={70} className='cursor-pointer' />
                     <Image src="/country/guerila.svg" alt="image" width={70} height={70} className='cursor-pointer' />
                     <Image src="/country/krapez.svg" alt="image" width={70} height={70} className='cursor-pointer' />
