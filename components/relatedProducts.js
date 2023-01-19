@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import BlogItem from './blogItem'
 
 export default function RelatedProducts() {
-    const [data, setData] = useState([])
+    const [data, setData] = useState([]);
     
     useEffect(() => {
         fetchPost()
