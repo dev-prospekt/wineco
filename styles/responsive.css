@@ -34,9 +34,7 @@
         grid-template-columns: 1fr 1fr;
         justify-items: center;
         gap: 20px;
-        /* position: absolute;
         bottom: 10%;
-        top: auto; */
         background: #FFFFFF;
         border-radius: 10px;
         padding: 20px 0px;
