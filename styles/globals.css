@@ -62,7 +62,7 @@ a {
 }
 
 .swiper {
-  overflow: hidden !important;
+  overflow: unset !important;
   padding: initial;
   height: 100vh;
 }
