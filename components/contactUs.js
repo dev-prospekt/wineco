@@ -23,8 +23,10 @@ export default function ContactUs() {
     return (
         <div className="contactus grid grid-cols-2 h-full">
 
-            <div className="flex flex-col justify-center items-start relative mr-36 mt-40 max-[600px]:mt-32">
-                <h1 className='font-butlerregular text-5xl text-original mb-10 max-[600px]:text-3xl uppercase'>
+            <div className="flex flex-col justify-center items-start relative mr-36 mt-40 
+            max-[600px]:mt-32">
+                <h1 className='font-butlerregular text-5xl text-original mb-10 max-[600px]:text-3xl uppercase
+                max-[600px]:w-full max-[600px]:align-middle'>
                     { data.attributes?.title }
                 </h1>
 
