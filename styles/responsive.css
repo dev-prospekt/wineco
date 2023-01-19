@@ -36,7 +36,7 @@
         gap: 20px;
         height: fit-content;
         position: absolute;
-        bottom: 40%;
+        bottom: 10%;
         top: auto;
     }
     .homepage > div:first-child > div:last-child img {
