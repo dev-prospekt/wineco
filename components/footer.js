@@ -5,6 +5,15 @@ import { useRouter } from 'next/router';
 export default function Footer() {
   const router = useRouter();
 
+  const openPageFromFooter = (event) => {
+    event.preventDefault();
+
+    router.push({
+        pathname: '/',
+        query: { pid: event.target.getAttribute("data-key") },
+    }, '/');
+  };
+
   return (
     <div className="max-w-7xl m-auto mt-40 max-[600px]:mt-24">
       
@@ -20,16 +29,16 @@ export default function Footer() {
 
           <ul className='font-avenirmedium text-siva font-normal'>
             <li className='mb-1 cursor-pointer'>
-              <a href='' data-key="0">Homepage</a>
+              <a href='' data-key="0" onClick={openPageFromFooter}>Homepage</a>
             </li>
             <li className='mb-1 cursor-pointer'>
-              <a href='' data-key="1">About Us</a>
+              <a href='' data-key="1" onClick={openPageFromFooter}>About Us</a>
             </li>
             <li className='mb-1 cursor-pointer'>
-              <a href='' data-key="4">Our Brands/Clients</a>
+              <a href='' data-key="4" onClick={openPageFromFooter}>Our Brands/Clients</a>
             </li>
             <li className='mb-1 cursor-pointer'>
-              <a href='' data-key="6">Contact Us</a>
+              <a href='' data-key="6" onClick={openPageFromFooter}>Contact Us</a>
             </li>
           </ul>
         </div>
