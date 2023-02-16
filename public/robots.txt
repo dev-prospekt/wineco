@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.wine-co.hr
+
+# Sitemaps
+Sitemap: https://www.wine-co.hr/sitemap.xml
