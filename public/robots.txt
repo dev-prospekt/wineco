@@ -3,8 +3,15 @@ User-agent: *
 Allow: /
 
 # Host
+<<<<<<< HEAD
 Host: http://localhost:3000
 
 # Sitemaps
 Sitemap: http://localhost:3000/sitemap.xml
 Sitemap: http://localhost:3000/server-sitemap.xml
+=======
+Host: https://www.wine-co.hr
+
+# Sitemaps
+Sitemap: https://www.wine-co.hr/sitemap.xml
+>>>>>>> 946fd384c9e660a1c043383d945a86c11e4eda15
