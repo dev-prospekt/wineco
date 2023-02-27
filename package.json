@@ -6,13 +6,15 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start -p 8080",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "embla-carousel-react": "^7.0.6",
     "jquery": "^3.6.1",
     "next": "13.0.6",
     "next-i18next": "^13.0.2",
+    "next-sitemap": "^3.1.52",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "swiper": "^8.4.5"
